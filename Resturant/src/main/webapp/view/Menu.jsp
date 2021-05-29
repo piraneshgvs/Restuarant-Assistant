@@ -29,14 +29,46 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
 
 </head>
-<body>
+<body >
+<div class="navbar">
+  
+  <h1>Menu Item</h1>
+ <a onclick="logout()">LOG OUT</a>
+</div>
+
+
+<div class="container">
+          
 <section class="sub-header">
-      
-            <div class="nav-link" id="navlink">
-                
-                <button type="button" class="bto" onclick="logout()">LOG OUT</button>
-          </div>
-           <h1>Menu Item</h1>
+      <div class="slideshow-container">
+
+<div class="mySlides fade">
+ 
+  <img src="../images/im.jpg" style="width:70%">
+ 
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="../images/im4.jpg" style="height:100%; width:50%">
+  
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="../images/im6.jpg" style="height:100% ;width:50%">
+
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+           
            
            
         </section>
@@ -55,12 +87,14 @@
 		
 			
 			<c:forEach items="${products}" var="food">
+			<div>
 	<tr>
 					<td><th><c:out value="${food.fid}"></c:out></th></td>
 					<td><th><c:out value="${food.fName}"></c:out></th></td>
 					<td><th><c:out value="${food.fPrice}"></c:out></th></td>
 					<td><th><a href="${pageContext.request.contextPath }/cart/buy/${food.fid}"><button type="button" class="btn btn-info">Add To Cart</button></a></th></td>
 	</tr>		
+	</div>
 			</c:forEach>
 	
 	</table>
@@ -68,7 +102,7 @@
 
 		<a href="/summary"><button type="button" class="btn btn-success">Go to Cart</button></a>
 		
-		
+		</div>
 
 	   <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
@@ -94,7 +128,27 @@
   
 </script>	
 	<script src="../js/app.js"></script>
+	<script>
+var slideIndex = 0;
+showSlides();
 
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 1700); // Change image every 2 seconds
+}
+</script>
 		
 </body>
 </html>

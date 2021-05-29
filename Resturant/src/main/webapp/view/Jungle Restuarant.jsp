@@ -21,8 +21,8 @@
             <div class="nav-link" id="navlink">
                 <i class="fa fa-times" onclick="hidemenu()"></i>
                 <ul>
-                     <li><a href="">ADMIN</a></li>
-                    <li><a href="">CHEF</a></li>
+                     <li><a href="./view/Adminlogin.jsp">ADMIN</a></li>
+                    <li><a href="./view/Cheiflogin.jsp">CHEF</a></li>
                     <li><a href="./view/index.jsp">USERS</a></li>
                     <li><a href="./view/About.html">ABOUT</a></li>
 

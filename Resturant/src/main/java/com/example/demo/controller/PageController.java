@@ -55,7 +55,7 @@ public class PageController {
 	
 	@RequestMapping("/")
 	public String homepage() {
-		return "Cheif";
+		return "Jungle Restuarant";
 	}
 	
 	

@@ -43,7 +43,6 @@
         </div>
         </form>
     </div>
-    <a href="/inventoryform"><button type="button" class="btn btn-success">Inventory Page</button></a>
-    <a href="/adminsummary"><button type="button" class="btn btn-success">AdminSummary Page</button></a>
+   
 </body>
 </html>

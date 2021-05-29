@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.example.demo.dao.InventaroyDAO;
+import com.example.demo.dao.LoginDAO;
 import com.example.demo.model.Foods;
 import com.example.demo.model.Ordersummary;
 
@@ -24,6 +26,8 @@ public class AdminController {
 	
 	@Autowired
 	private InventaroyDAO inventaroyDAO;
+	@Autowired
+	private LoginDAO loginDAO;
 	
 	@RequestMapping("/inventoryform")  
     public String showform(ModelMap map){  
@@ -75,4 +79,24 @@ public class AdminController {
 	return "Adminsummary";	
 	}
 
+	
+	
+	@RequestMapping(value="/login", method = RequestMethod.POST)
+	public String login(@RequestParam String id, @RequestParam String password, ModelMap modelMap){
+		
+		String ans = loginDAO.login(id, password);
+		if(ans.equals("false")) {
+			modelMap.addAttribute("message", "Please check your Phone nuumber and password");
+			return "Adminlogin";
+		}
+		else {
+			modelMap.addAttribute("title", ans);
+			return "Adminpage";
+		}
+		
+		
+		
+
+		
+	}
 }

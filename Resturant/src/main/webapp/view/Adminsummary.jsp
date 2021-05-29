@@ -16,7 +16,7 @@
  <link rel="stylesheet" href="../css/Adminsummary.css">   
 <title>Insert title here</title>
 </head>
-<body>
+<body class="bg-image">
   <div class="hero-image">
   <img src=" ../images/pexels-pixabay-326279.jpg" alt="Notebook" style="width:100%;">
   <div class="content">
