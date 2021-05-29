@@ -91,6 +91,7 @@ public class AdminController {
 		}
 		else {
 			modelMap.addAttribute("title", ans);
+			modelMap.put("listfeedback", loginDAO.getAllFeedback());
 			return "Adminpage";
 		}
 		

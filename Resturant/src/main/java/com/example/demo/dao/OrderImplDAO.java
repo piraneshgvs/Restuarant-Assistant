@@ -46,21 +46,8 @@ public class OrderImplDAO implements OrderDAO{
 	@Override
 	public void insertFeedback(String feedback) {
 		
-		String query = "select user_id from user";
-		List<Map<String, Object>> uid = jdbcTemplate.queryForList(query);
+		String query = "update user set feedback= ? where user_id= ? ;";
 		String userid = Phone.getUserid();
-		for (Map<String, Object> id : uid) {
-			
-			String a = String.valueOf(id.get("user_id"));
-			if(userid.equals(a)) {
-			
-				String query2 = "insert into user(feedback) values (?) where user_id=(?)";
-				Object[] args = new Object[] { feedback, userid};
-		
-				jdbcTemplate.update(query2, args);
-				break;
-			}
-		
-	}
+	    jdbcTemplate.update(query,feedback,userid);
 	}
 }

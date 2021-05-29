@@ -1,11 +1,15 @@
 package com.example.demo.dao;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
+
+import com.example.demo.model.Feedback;
+import com.example.demo.model.Foods;
 
 
 @Component
@@ -14,6 +18,10 @@ public class LoginImplDAO implements LoginDAO {
 	
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
+	
+	
+	
+	private static List<Feedback> feedList;
 
 	@Override
 	public String login(String id, String password) {
@@ -36,10 +44,29 @@ public class LoginImplDAO implements LoginDAO {
 				return "false";
 			}
 			
+
+		
+		
+		
+	}
+
+	@Override
+	public List<Feedback> getAllFeedback() {
+		
+		feedList = new ArrayList<Feedback>();
+		String query = "select phonenumber,feedback from user order by time desc";
+		List<Map<String, Object>> feedRows = jdbcTemplate.queryForList(query);
+
+		for (Map<String, Object> feedRow : feedRows) {
 			
-		
-		
-		
+			String phone = (String) feedRow.get("phonenumber");
+			String feedback = (String) feedRow.get("feedback");
+			
+			System.out.println(feedback);
+			feedList.add(new Feedback(phone,feedback));
+		}
+	
+		return feedList;
 		
 		
 	}
