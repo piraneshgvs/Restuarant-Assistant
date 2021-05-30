@@ -29,7 +29,7 @@
 
 <div class="login">
   <div class="login-header">
-    <h1>Jungle Restuarant Cheif Login</h1>
+    <h3>Jungle Restuarant Cheif Login</h3>
   </div>
   <div class="login-form">
   <form:form action="/cheif/login" method="post">

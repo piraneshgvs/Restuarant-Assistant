@@ -4,76 +4,320 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restuarant</title>
-    <link rel="stylesheet" href="../css/present.css">
+    <title>Jungle Restuarant</title>
+
+    <!-- aos css cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- google fonts cdn link  -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Girassol&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">  
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;500&family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="../css/Jungle Restuarant.css">
+
 </head>
 <body>
-    <section class="header">
-        <nav>
-            <a href="Jaga Restuarant.html"><img src="../images/logo.jpg"></a>
-            <div class="nav-link" id="navlink">
-                <i class="fa fa-times" onclick="hidemenu()"></i>
-                <ul>
-                     <li><a href="./view/Adminlogin.jsp">ADMIN</a></li>
-                    <li><a href="./view/Cheiflogin.jsp">CHEF</a></li>
-                    <li><a href="./view/index.jsp">USERS</a></li>
-                    <li><a href="./view/About.html">ABOUT</a></li>
+    
+<!-- header section starts  -->
 
-                </ul>
-            </div>
-            <i class="fa fa-bars" onclick="showmenu()"></i>
-        </nav> 
-        <div class="text-box">
-            <h1>Welcome To largest Jungle Restuarant</h1>
-            <p>Choose your delicious food....High Quality Foods....Realife Jungle Experience</p>
-            <a href="./view/Menu Duplicate.html" class="hero-btn">Explore Now</a>
+<header>
+
+    <a href="#" class="logo"><img src="../images/logo-img.png" alt=""></a>
+
+    <div id="menu-bar" class="fas fa-hamburger"></div>
+
+    <nav class="navbar">
+        <ul>
+            <li><a class="active" href="#home">home</a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="#menu">menu</a></li>
+            <li><a href="#popular">popular</a></li>
+            <li><a href="#gallery">gallery</a></li>
+            <li><a href="./view/Adminlogin.jsp">Admin</a></li>
+            <li><a href="./view/Cheiflogin.jsp">Cheif</a></li>
+            <li><a href="./view/index.jsp">Users</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="content" data-aos="fade-right">
+        <h3>Welcome To Jungle Restuarant!!!!</h3>
+        <p>We belive good food offer great smile</p>
+        <a href="./view/index.jsp"><button class="btn">get started</button></a>
+    </div>
+
+    <div class="image" data-aos="fade-up">
+        <img src="../images/home-img.png" alt="">
+    </div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- about section starts  -->
+
+<section class="about" id="about">
+
+    <div class="image" data-aos="fade-right"></div>
+
+    <div class="content" data-aos="fade-left">
+        <h3>a word about us</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea accusantium eligendi a totam consequatur! Quis minus amet iusto iure repudiandae, incidunt enim fugiat ipsa? Iure quam et quo quos quisquam!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint totam pariatur saepe sit nostrum consequuntur, praesentium accusamus harum voluptate soluta.</p>
+        <a href="#"><button class="btn">learn more</button></a>
+    </div>
+
+</section>
+
+<!-- about section ends -->
+
+<section class="menu" id="menu">
+
+<h1 class="heading"> our delicious <span>menu</span> </h1>
+
+<ul class="list" data-aos="fade-down">
+    <li class="btn" data-src="../images/menu1.jpg">breakfast</li>
+    <li class="btn active" data-src="../images/menu2.jpg">lunch</li>
+    <li class="btn" data-src="../images/menu3.jpg">dinner</li>
+    <li class="btn" data-src="../images/menu4.jpg">dessert</li>
+</ul>
+
+<div class="row" data-aos="fade-right">
+
+    <div class="image" data-aos="fade-left">
+        <img src="../images/menu2.jpg" id="menu-img" alt="">
+    </div>
+
+    <div class="content">
+        <div class="info">
+            <h3> <span>01.</span> we serve best food in the country </h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum, vero?</p>
+        </div>
+        <div class="info">
+            <h3> <span>02.</span> we serve best food in the country </h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum, vero?</p>
+        </div>
+        <div class="info">
+            <h3> <span>03.</span> we serve best food in the country </h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum, vero?</p>
+        </div>
+        <div class="info">
+            <h3> <span>04.</span> we serve best food in the country </h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum, vero?</p>
+        </div>
+    </div>
+
+</div>
+
+</section>
+
+<!-- popular section starts  -->
+
+<section class="popular" id="popular">
+
+<h1 class="heading"> most <span>popular</span> foods </h1>
+
+<div class="box-container">
+
+    <div class="box" data-aos="fade-right">
+        <img src="../images/product1.jpg" alt="">
+        <h3>delicious food</h3>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+        <div class="price">$30.00</div>
+        <a href="#"><button class="btn">add to cart</button></a>
+    </div>
+
+    <div class="box" data-aos="fade-left">
+        <img src="../images/product2.jpg" alt="">
+        <h3>delicious food</h3>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+        <div class="price">$30.00</div>
+        <a href="#"><button class="btn">add to cart</button></a>
+    </div>
+
+    <div class="box" data-aos="fade-right">
+        <img src="../images/product3.jpg" alt="">
+        <h3>delicious food</h3>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+        <div class="price">$30.00</div>
+        <a href="#"><button class="btn">add to cart</button></a>
+    </div>
+
+    <div class="box" data-aos="fade-left">
+        <img src="../images/product4.jpg" alt="">
+        <h3>delicious food</h3>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+        <div class="price">$30.00</div>
+        <a href="#"><button class="btn">add to cart</button></a>
+    </div>
+
+</div>
+
+</section>
+
+<!-- popular section ends -->
+
+<!-- gallery section starts  -->
+
+<section class="gallery" id="gallery">
+
+<h1 class="heading"> our food <span>gallery</span> </h1>
+
+<div class="box-container">
+
+    <div class="box" data-aos="fade-up">
+        <img src="../images/img1.jpg" alt="">
+        <h3>delicious food</h3>
+    </div>
+
+    <div class="box" data-aos="fade-up">
+        <img src="../images/img2.jpg" alt="">
+        <h3>delicious food</h3>
+    </div>
+
+    <div class="box" data-aos="fade-up">
+        <img src="../images/img3.jpg" alt="">
+        <h3>delicious food</h3>
+    </div>
+
+    <div class="box" data-aos="fade-up">
+        <img src=".//images/img4.jpg" alt="">
+        <h3>delicious food</h3>
+    </div>
+
+    <div class="box" data-aos="fade-up">
+        <img src="../images/img5.jpg" alt="">
+        <h3>delicious food</h3>
+    </div>
+
+    <div class="box" data-aos="fade-up">
+        <img src="../images/img6.jpg" alt="">
+        <h3>delicious food</h3>
+    </div>
+
+</div>
+
+</section>
+
+<!-- gallery section ends -->
+
+
+
+<!-- footer section starts  -->
+
+<div class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>contact info</h3>
+            <p> <i class="fas fa-map-marker-alt"></i> mumbai, indai 400104 </p>
+            <p> <i class="fas fa-envelope"></i> example@gmail.com </p>
+            <p> <i class="fas fa-phone"></i> +123-456-7890 </p>
+            <p> <i class="fas fa-phone"></i> +111-222-333 </p>
         </div>
 
-    </section>
-    <!---------Food Style----------------------->
-    <section class="food-style">
-        <h1>Food Style</h1>
-        <div class="row">
-            <div class="food-col">
-                <h3>INDIAN STYLE</h3>
-                <p>Indian cuisine consists of a variety of regional and traditional cuisines native to the Indian subcontinent.</p>
-            </div>
-            <div class="food-col">
-                <h3>CHINESE STYLE</h3>
-                <p>Chinese food, rich and colorful, has diversified color, aromatic flavor, and excellent taste as its main features.</p> 
-            </div>
+        <div class="box">
+            <h3>branch location</h3>
+            <a href="#">india</a>
+            <a href="#">USA</a>
+            <a href="#">france</a>
+            <a href="#">russia</a>
         </div>
 
-    </section>
-    <!-----------------Footer-------------------->
-    <section class="footer">
-        <h4>About Us</h4>
-        <p>
-        <br>We are special in Chinese, French, Tandoori, Indian, Continental and Arabic cuisine. Join us for a delightful food at our multi-cuisine restaurant with your Family<br>
-        <br>Take your pick and we will pamper you with fine dine experience to relish a menu specially designed by our chefs.</p>
-        <div class="icon">
-            <i class="fa fa-facebook-official"></i>
-            <i class="fa fa-twitter"></i>
-            <i class="fa fa-whatsapp"></i>
+        <div class="box">
+            <h3>quick links </h3>
+            <a href="#">home</a>
+            <a href="#">about</a>
+            <a href="#">menu</a>
+            <a href="#">popular</a>
+            <a href="#">gallery</a>
+            <a href="#">order</a>
         </div>
-        <p>Made by Scorpion King's</p>
-    </section>
-    <!----------Javascript for toggle menu------->
-    <script>
-        var navlink=document.getElementById("navlink");
-        function showmenu(){
-            navlink.style.right="0"
-        }
-        function hidemenu(){
-            navlink.style.right="-200px"
-        }
-    </script>
+
+        <div class="box">
+            <h3>follow us</h3>
+            <a href="#">instagram</a>
+            <a href="#">facebook</a>
+            <a href="#">twitter</a>
+            <a href="#">linkedin</a>
+        </div>
+
+    </div>
+
+    <h1 class="credit">create by <a href="#">mr. web designer</a> all rights reserved. </h1>
+
+</div>
+
+<!-- footer section ends -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- aos js cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+<!-- jquery cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="../js/Jungle Restuarant.js"></script>
+
+<!-- initializing aos  -->
+
+<script>
+
+    AOS.init({
+        delay:400,
+        duration:1000
+    })
+
+</script>
+
 </body>
 </html>
