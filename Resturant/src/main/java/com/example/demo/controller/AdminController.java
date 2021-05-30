@@ -82,9 +82,9 @@ public class AdminController {
 	
 	
 	@RequestMapping(value="/login", method = RequestMethod.POST)
-	public String login(@RequestParam String id, @RequestParam String password, ModelMap modelMap){
+	public String login(@RequestParam String id, @RequestParam String password, @RequestParam String role, ModelMap modelMap){
 		
-		String ans = loginDAO.login(id, password);
+		String ans = loginDAO.login(id, password,role);
 		if(ans.equals("false")) {
 			modelMap.addAttribute("message", "Please check your Phone nuumber and password");
 			return "Adminlogin";

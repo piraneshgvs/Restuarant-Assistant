@@ -24,10 +24,10 @@ public class LoginImplDAO implements LoginDAO {
 	private static List<Feedback> feedList;
 
 	@Override
-	public String login(String id, String password) {
+	public String login(String id, String password, String role) {
 		
-		String query = "select name,password from staff where phone=?";
-		List<Map<String, Object>> logins = jdbcTemplate.queryForList(query,id);
+		String query = "select name,password from staff where phone=? and staff_role=?";
+		List<Map<String, Object>> logins = jdbcTemplate.queryForList(query,id,role);
 		String name=null;
 		String user_password=null;
 		for(Map<String, Object> login : logins) {
@@ -37,12 +37,17 @@ public class LoginImplDAO implements LoginDAO {
 			
 			
 		}
+		try {
 			if(user_password.equals(password)){
 				return name;
 			}
 			else {
 				return "false";
 			}
+		}
+		catch(Exception e){
+			return "false";
+		}
 			
 
 		

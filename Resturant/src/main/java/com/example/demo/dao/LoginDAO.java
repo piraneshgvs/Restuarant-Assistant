@@ -11,6 +11,6 @@ import com.example.demo.model.Foods;
 public interface LoginDAO {
 
 	
-	public String login(String id, String password);
+	public String login(String id, String password,String role);
 	public List<Feedback> getAllFeedback();
 }
