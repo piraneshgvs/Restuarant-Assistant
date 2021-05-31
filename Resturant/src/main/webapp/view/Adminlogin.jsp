@@ -11,6 +11,13 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="../css/Adminlogin.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <title>Adminlogin Page</title>
 </head>
 <body>
@@ -29,7 +36,7 @@
 
 <div class="login">
   <div class="login-header">
-    <h3>Jungle Restuarant Admin Login</h3>
+    <h1>Jungle Restuarant Admin Login</h1>
   </div>
   <div class="login-form">
   <form:form action="/login" method="post">
@@ -37,8 +44,7 @@
    <input type="text" name="id" id="id" placeholder="Enter Phone number"><br>
     <h3>Password:</h3>
     <input type="password" name="password" id="password" placeholder="Enter Password">
-    
-    <h3>Role</h3>
+      <h3>Role</h3>
    <input type="text" name="role" id="role" value="Admin" readonly>
 
     <br>

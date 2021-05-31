@@ -1,0 +1,11 @@
+body{
+	background-image:url("../images/inventory1.jpg");
+	background-size:cover;
+	overflow:hidden;
+}
+
+.table{
+	padding:200px;
+	position:center;
+	
+}

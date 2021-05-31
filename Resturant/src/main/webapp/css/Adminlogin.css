@@ -2,10 +2,10 @@
 
 
 body {
-  background:url('http://cdn.wallpapersafari.com/13/6/Mpsg2b.jpg');
+  background-image:url("../images/Admin2.jpg");
   margin:0px;
   font-family: 'Ubuntu', sans-serif;
-	background-size: 100% 110%;
+	background-size:cover;
 	padding:30px;
 }
 h1, h2, h3, h4, h5, h6, a {
@@ -19,7 +19,7 @@ h1{
   max-width:500px;
 }
 .login-header {
-  color:#fff;
+  color:black;
   text-align:center;
   font-size:300%;
 }
@@ -35,7 +35,9 @@ h1{
 .login-form h3 {
   text-align:left;
   margin-left:40px;
-  color:#fff;
+  color: #ff6a00;
+  font-size:20px;
+  font-family:bold;
 }
 .login-form {
   box-sizing:border-box;

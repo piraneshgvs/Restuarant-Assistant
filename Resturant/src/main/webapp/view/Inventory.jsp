@@ -7,6 +7,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Inventaroy Page</title>
+<link rel="stylesheet" href="../css/Inventory.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
 <!-- jQuery library -->
@@ -17,7 +18,9 @@
    
 </head>
 <body>
+
 <form:form action="/insertfood" modelAttribute="addItem">
+       <div class="table">
 		<table  class="table table-hover">
 			<tr>
 				<td>Food ID :</td>
@@ -33,14 +36,14 @@
 			</tr>
 			
 			<tr>
-				<td><input type="submit" class="btn btn-success" name="submit" value="Add Food"></td>
-				<td><input type="reset" value="Clear"></td>
+				<td></td>
+				<td><input type="reset" class="btn btn-warning" value="Clear"></td>
 				<td><input type="submit" class="btn btn-primary" name="update" value="Update Food"></td>
 		        <td><input type="submit" class="btn btn-danger" name="delete" value="Remove Food"></td>
-		
+		        <td><input type="submit" class="btn btn-success" name="submit" value="Add Food"></td>
 			</tr>
 		</table>
-		
+		</div>
 		
 	</form:form>
 	
@@ -48,5 +51,7 @@
 	
 	
 <div>${addMsg}</div>
+
+
 </body>
 </html>

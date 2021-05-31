@@ -27,56 +27,99 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Girassol&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+<style>
+<style>
+body {
+margin:0;
+}
+.navbar {
+  z-index: 1;
+}
 
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float:right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.navbar button{
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+.navbar button:hover {
+  background: #ddd;
+  color: black;
+}
+.main {
+  padding: 16px;
+  margin-top: 30px;
+ }
+
+</style>
 </head>
-<body >
-<div class="navbar">
-  
-  <h1>Menu Item</h1>
- <a onclick="logout()">LOG OUT</a>
-</div>
+<body>
 
-
-<div class="container">
-          
-<section class="sub-header">
-      <div class="slideshow-container">
-
-<div class="mySlides fade">
- 
-  <img src="../images/im.jpg" style="width:70%">
- 
-</div>
-
-<div class="mySlides fade">
-  
-  <img src="../images/im4.jpg" style="height:100%; width:50%">
-  
-</div>
-
-<div class="mySlides fade">
-  
-  <img src="../images/im6.jpg" style="height:100% ;width:50%">
-
-</div>
-
-</div>
-<br>
-
-<div style="text-align:center">
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-</div>
-           
-           
-           
-        </section>
-     
+   <div class="navbar">
+   <button type="button" class="btn btn-danger" onclick="logout()">LOG OUT</button>
+   <a href="/summary" class="btn btn-success">Go to Cart</a>
+   </div>
       
+            
+          <br>
+    
+     <div class="main">
+  
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+       <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
 
-         
-		<table class="table table-hover">
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img class="fill" src="../images/Main1.jpg" style="width:100%;"> 
+      </div>
+
+      <div class="item">
+        <img class="fill" src="../images/Main2.jpg" alt="Chicago" style="width:100%;">
+      </div>
+    
+      <div class="item">
+        <img class="fill"  src="../images/Main3.jpeg" alt="New york" style="width:100%;">
+      </div>
+      
+      <div class="item">
+        <img class=""  src="../images/Main4.png" alt="New york" style="width:100%;">
+      </div>
+      
+    </div>
+  </div>
+  <table class="table table-hover">
 	
 			<tr>
 				<td><th>Food id</th></td>
@@ -87,22 +130,21 @@
 		
 			
 			<c:forEach items="${products}" var="food">
-			<div>
 	<tr>
 					<td><th><c:out value="${food.fid}"></c:out></th></td>
 					<td><th><c:out value="${food.fName}"></c:out></th></td>
 					<td><th><c:out value="${food.fPrice}"></c:out></th></td>
 					<td><th><a href="${pageContext.request.contextPath }/cart/buy/${food.fid}"><button type="button" class="btn btn-info">Add To Cart</button></a></th></td>
 	</tr>		
-	</div>
 			</c:forEach>
 	
 	</table>
+	</div>
 	<div>${addMsg}</div>
 
-		<a href="/summary"><button type="button" class="btn btn-success">Go to Cart</button></a>
 		
-		</div>
+		
+		
 
 	   <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
@@ -128,27 +170,7 @@
   
 </script>	
 	<script src="../js/app.js"></script>
-	<script>
-var slideIndex = 0;
-showSlides();
 
-function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 1700); // Change image every 2 seconds
-}
-</script>
 		
 </body>
 </html>
