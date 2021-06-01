@@ -1,0 +1,31 @@
+    .proceed {
+ 
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  padding: 420px 400px; /* Some padding */
+  
+}
+
+    
+      .marq {
+         
+          font-size: 36px;
+          font-weight: bold;
+          color: white;
+      }
+      .feedbackbtn{
+          position:absolute;
+          bottom:0;
+          font-size: 36px;
+          font-weight: bold;
+          color: white;
+      }
+      body{
+           background-image:url("../images/payment.jpg");
+           overflow:hidden;
+         
+      }
+      
+ 
+
+

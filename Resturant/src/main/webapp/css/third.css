@@ -1,5 +1,6 @@
 .place{
 	text-align:right;
+	font-Weight:50px;
 }
 .heading{
 	padding:50px;
@@ -8,10 +9,13 @@
 	font-size:25px;
 }
 .table{
-	padding:30px;
-	position:center;
+	padding:80px;
+	position:responsive;
+	right:-150px;
 }
 body{
-	background-image:url("../images/Chicken.jpg");
+	background-image:url("../images/Menubg2.jpg");
+	background-size:cover;
+    background-repeat:no-repeat;
 	
 }

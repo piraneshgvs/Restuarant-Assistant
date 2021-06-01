@@ -15,9 +15,40 @@
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+.navbar {
+  z-index: 1;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.navbar a {
+  float:left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+</style>
    
 </head>
 <body>
+ <div class="navbar">
+    <a href="/">Home</a>
+    </div>
 
 <form:form action="/insertfood" modelAttribute="addItem">
        <div class="table">

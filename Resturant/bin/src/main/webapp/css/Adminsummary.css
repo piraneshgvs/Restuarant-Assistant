@@ -1,0 +1,15 @@
+.hero-image img {vertical-align: middle;}
+body {
+  overflow: hidden; 
+}
+
+.hero-image .content {
+  position: absolute;
+  bottom: 0;
+  background-size: cover;
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.25 opacity */
+  color: #ff6a00;
+  
+  width: 50%;
+  padding: 200px;
+}        

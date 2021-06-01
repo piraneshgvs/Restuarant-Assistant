@@ -71,6 +71,21 @@ margin:0;
   background: #ddd;
   color: black;
 }
+.navbar #aa {
+  float:left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
+.navbar #aa:hover {
+  background: #ddd;
+  color: black;
+}
 .main {
   padding: 16px;
   margin-top: 30px;
@@ -81,6 +96,7 @@ margin:0;
 <body>
 
    <div class="navbar">
+   <a href="/" id="aa">Home</a>
    <button type="button" class="btn btn-danger" onclick="logout()">LOG OUT</button>
    <a href="/summary" class="btn btn-success">Go to Cart</a>
    </div>

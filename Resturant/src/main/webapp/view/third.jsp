@@ -48,6 +48,21 @@ margin:0;
   text-decoration: none;
   font-size: 17px;
 }
+.navbar #aa {
+  float:left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
+.navbar #aa:hover {
+  background: #ddd;
+  color: black;
+}
 
 .navbar a:hover {
   background: #ddd;
@@ -66,6 +81,7 @@ margin:0;
 </head>
 <body>
    <div class="navbar">
+    <a href="/" id="aa">Home</a>
    <button type="button" class="btn btn-danger" onclick="logout()">LOG OUT</button>
    <a href="/view/Menu" class="btn btn-primary">Continue
 		fooding</a>
@@ -76,7 +92,7 @@ margin:0;
    
 	<form:form action="saveOrder" modelAttribute="addfood" method="post">
 	 <div class="table">
-	<table class="table table-hover">
+	<table class="table table-condensed">
 		<tr>
 			
 			<th>Id</th>

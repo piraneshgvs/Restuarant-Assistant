@@ -15,8 +15,42 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
  <link rel="stylesheet" href="../css/Adminsummary.css">   
 <title>Insert title here</title>
+<style>
+.navbar {
+  z-index: 1;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.navbar a {
+  float:left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+</style>
 </head>
-<body class="bg-image">
+<body>
+
+<div class="navbar">
+    <a href="/">Home</a>
+    </div>
+    
   <div class="hero-image">
   <img src=" ../images/pexels-pixabay-326279.jpg" alt="Notebook" style="width:100%;">
   <div class="content">

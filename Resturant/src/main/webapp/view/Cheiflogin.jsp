@@ -19,18 +19,15 @@
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <title>Cheiflogin Page</title>
-</head>
-<body>
-
-
 <style>
 #button {width:250px;}
 
 </style>
-
-
-
-
+</head>
+<body>
+<div class="navbar">
+   <a href="/">Home</a>
+   </div>
 
 
 
@@ -39,18 +36,21 @@
     <h1>Jungle Restuarant Cheif Login</h1>
   </div>
   <div class="login-form">
-  <form:form action="/login" method="post">
+  <form:form action="/cheif/login" method="post">
     <h3>Phone Number:</h3>
    <input type="text" name="id" id="id" placeholder="Enter Phone number"><br>
     <h3>Password:</h3>
     <input type="password" name="password" id="password" placeholder="Enter Password">
 
     <h3>Role</h3>
-   <input type="text" name="role" id="role" value="Admin" readonly>
+   <input type="text" name="role" id="role" value="Cheif" readonly>
     <br>
     <input type="submit" value="Login" id="button" class="w3-button w3-red w3-round-large"/>
     <br>
     </form:form>
+    <div class="img">
+    <img src="../images/ChiefAd.png" alt="Girl in a jacket" width="400" height="500">
+    </div>
     ${message }
     
     <br>

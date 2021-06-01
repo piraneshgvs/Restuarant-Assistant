@@ -1,0 +1,17 @@
+.place{
+	text-align:right;
+}
+.heading{
+	padding:50px;
+	text-align:center;
+	color:green;
+	font-size:25px;
+}
+.table{
+	padding:30px;
+	position:center;
+}
+body{
+	background-image:url("../images/Chicken.jpg");
+	
+}
