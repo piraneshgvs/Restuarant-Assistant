@@ -82,13 +82,12 @@ margin:0;
 <body>
    <div class="navbar">
     <a href="/" id="aa">Home</a>
-   <button type="button" class="btn btn-danger" onclick="logout()">LOG OUT</button>
-   <a href="/view/Menu" class="btn btn-primary">Continue
-		fooding</a>
-   </div>
-    <div class="heading">
-	<h3 >CART PAGE</h3>
-	</div>
+    <a href="/view/Menu" id="aa" class="btn btn-primary">Menu</a>
+    
+    <label>Cart Page</label>
+    <button type="button" class="btn btn-danger" onclick="logout()">LOG OUT</button>
+  </div>
+    
    
 	<form:form action="saveOrder" modelAttribute="addfood" method="post">
 	 <div class="table">

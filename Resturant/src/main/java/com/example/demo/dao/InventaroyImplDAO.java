@@ -13,7 +13,7 @@ import com.example.demo.model.Foods;
 import com.example.demo.model.Ordergrandtotal;
 import com.example.demo.model.Ordersummary;
 import com.example.demo.model.Phone;
-import com.example.demo.model.Status;
+
 
 
 
@@ -133,20 +133,6 @@ public class InventaroyImplDAO implements InventaroyDAO{
 		
 	}
 
-	@Override
-	public List<Status> getfoodstatus() {
-		List<Status> status=new ArrayList<Status>();
-		String query="select available from food";
-		List<Map<String, Object>> available=jdbcTemplate.queryForList(query);
-		for(Map<String, Object> avail:available) {
-			
-			String a= (String) avail.get("available");
-	
-			status.add(new Status(a));
-			
-		}
-			return status;
-		   }
 	
 
 }

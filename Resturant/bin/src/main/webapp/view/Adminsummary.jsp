@@ -36,6 +36,9 @@
   text-decoration: none;
   font-size: 17px;
 }
+.navbar .logo img{
+  height:5rem;
+}
 
 
 .navbar a:hover {
@@ -48,12 +51,24 @@
 <body>
 
 <div class="navbar">
-    <a href="/">Home</a>
-    </div>
+		<a href="/" class="logo"><img src="../images/logo-img.png" alt="Home"></a>
+		<a href="/view/Adminpage.jsp" id="aa" class="btn btn-success">Admin Home</a>
+		<a href="/inventoryform" id="aa" class="btn btn-success">Inventory Page</a>
+		<a href="/adminsummary" id="aa" class="btn btn-success" aria-disabled="true">AdminSummary Page</a>
+		</div>
+  <div class="date">  
+  <form action="\adminsummary">  
+  <label>Select your From Date:</label>
+  <input type="date" name="date">
+   <label>Select your To  Date:</label>
+  <input type="date" name="date1">
+  <input type="submit">
+  </form>
+  </div>
+  
+
     
-  <div class="hero-image">
-  <img src=" ../images/pexels-pixabay-326279.jpg" alt="Notebook" style="width:100%;">
-  <div class="content">
+ 
 		<table class="table table-hover">
 	
 			<tr>
@@ -79,9 +94,7 @@
 			
 		</table >
 		<table align="right">
-		    <marquee>
-			 $ Grand Total $
-			</marquee>
+		   
 			<tr>
 			<td><th>Grand Total</th></td>
 			</tr>
@@ -95,7 +108,6 @@
 			</c:forEach>
 	
 	</table>
-	</div>
-	</div>
+	
 </body>
 </html>

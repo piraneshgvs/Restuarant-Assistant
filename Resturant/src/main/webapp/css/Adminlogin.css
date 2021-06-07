@@ -34,6 +34,9 @@ h1{
   border-radius:10px;
   box-shadow:0px 0px 10px #000;
 } */
+h1{
+	padding-top:10%;
+}
 .login-form h3 {
   text-align:left;
   margin-left:40px;

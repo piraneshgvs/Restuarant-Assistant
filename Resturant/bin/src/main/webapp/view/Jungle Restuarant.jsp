@@ -38,8 +38,7 @@
             <li><a href="#menu">menu</a></li>
             <li><a href="#popular">popular</a></li>
             <li><a href="#gallery">gallery</a></li>
-            <li><a href="./view/Adminlogin.jsp">Admin</a></li>
-            <li><a href="./view/Cheiflogin.jsp">Cheif</a></li>
+            <li><a href="./view/Adminlogin.jsp">Login</a></li>
             <li><a href="./view/index.jsp">Users</a></li>
         </ul>
     </nav>

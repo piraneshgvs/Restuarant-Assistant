@@ -16,6 +16,12 @@
   
 </head>
 <body>
+ <header>
+    <a href="/" id="aa">Home</a>
+    <a href="/view/Menu" id="aa" class="btn btn-primary">Go to Menu</a>
+    <a href="/summary" id="aa" class="btn btn-primary">Go to Cart</a>
+    <button type="button" class="btn btn-danger" onclick="logout()">LOG OUT</button>
+  </header>
     <marquee bgcolor="black"><div class="marq">Jungle Restaurant !! Thanks For Coming !!</div></marquee>
                  
               <div class="proceed">

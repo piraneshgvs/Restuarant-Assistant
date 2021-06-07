@@ -47,7 +47,7 @@ public class AdminController {
 	@RequestMapping("/inventoryform")  
     public String showform(ModelMap map){  
     	map.addAttribute("allfoods",restuarantDao.getAllFoods1());
-    	map.addAttribute("variable",inventaroyDAO.getfoodstatus());
+    	
     
     	return "Inventory"; 
     } 
@@ -135,11 +135,11 @@ public class AdminController {
          System.out.println(page);
               if(page.equals("Admin")) {
             	  modelMap.addAttribute("name", staffRole.getName());
-            	  return "Adminpage";
+            	  return "redirect:/inventoryform";
               }
               else {
             	  modelMap.addAttribute("name", staffRole.getName());
-            	  return "Cheif";
+            	  return "redirect:/cheif";
               }
 		}
 		

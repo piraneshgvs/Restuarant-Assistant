@@ -19,9 +19,77 @@
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <title>Adminlogin Page</title>
+<style>
+
+.navbar {
+  z-index: 1;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #FFD801;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float:right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.navbar button{
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+.navbar #aa {
+  float:left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
+.navbar #aa:hover {
+  background: #ddd;
+  color: black;
+}
+.main {
+  padding: 16px;
+  margin-top: 30px;
+ }
+
+
+
+
+</style>
 </head>
 <body>
-
+ <div class="navbar">
+    <a href="/" id="aa">Home</a>
+   
+    
+ 
+  </div>
+    
 
 <style>
 #button {width:250px;}
@@ -29,18 +97,14 @@
 </style>
 
 
-<!--Header section starts-->
-<header>
-  <nav><a href="/" class="logo"><img src="../images/logo-img.png" alt="Home"></a></nav>
-</header>
-<!--header section ends-->
+
 
 
 
 
 <div class="login">
   <div class="login-header">
-    <h1>Jungle Restuarant Admin Login</h1>
+    <h1>Jungle Restuarant Login</h1>
   </div>
   <div class="login-form">
   <form:form action="/login" method="post">

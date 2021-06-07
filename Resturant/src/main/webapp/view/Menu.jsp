@@ -38,7 +38,7 @@ margin:0;
 
 .navbar {
   overflow: hidden;
-  background-color: #333;
+  background-color: #FFD801;
   position: fixed;
   top: 0;
   width: 100%;
@@ -74,7 +74,7 @@ margin:0;
 .navbar #aa {
   float:left;
   display: block;
-  color: #f2f2f2;
+  color: black;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -135,10 +135,11 @@ margin:0;
       
     </div>
   </div>
+
   <table class="table table-hover">
 	
 			<tr>
-				<td><th>Food id</th></td>
+				
 				<td><th>Food Name</th></td>
 				<td><th>Price</th></td>
 				<td><th>Click Add to Cart</th></td>
@@ -147,7 +148,7 @@ margin:0;
 			
 			<c:forEach items="${products}" var="food">
 	<tr>
-					<td><th><c:out value="${food.fid}"></c:out></th></td>
+					
 					<td><th><c:out value="${food.fName}"></c:out></th></td>
 					<td><th><c:out value="${food.fPrice}"></c:out></th></td>
 					<td><th><a href="${pageContext.request.contextPath }/cart/buy/${food.fid}"><button type="button" class="btn btn-info">Add To Cart</button></a></th></td>
@@ -158,7 +159,7 @@ margin:0;
 	</div>
 	<div>${addMsg}</div>
 
-		
+	
 		
 		
 

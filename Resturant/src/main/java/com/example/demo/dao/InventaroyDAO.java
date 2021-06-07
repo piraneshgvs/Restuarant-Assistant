@@ -9,7 +9,6 @@ import org.springframework.stereotype.Component;
 import com.example.demo.model.Foods;
 import com.example.demo.model.Ordergrandtotal;
 import com.example.demo.model.Ordersummary;
-import com.example.demo.model.Status;
 
 @Component
 public interface InventaroyDAO {
@@ -23,7 +22,7 @@ public interface InventaroyDAO {
 	public void updateFoodItem(int id, String name, String price);
 	public void updateFoodAvailable(int id);
 	public void updateFoodAvailable1(int id);
-	public List<Status> getfoodstatus();
+	
 	
 
 }

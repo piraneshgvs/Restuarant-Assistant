@@ -29,7 +29,11 @@
 </style>
 
 
-
+<!--Header section starts-->
+<header>
+  <nav><a href="/" class="logo"><img src="../images/logo-img.png" alt="Home"></a></nav>
+</header>
+<!--header section ends-->
 
 
 
@@ -44,8 +48,7 @@
    <input type="text" name="id" id="id" placeholder="Enter Phone number"><br>
     <h3>Password:</h3>
     <input type="password" name="password" id="password" placeholder="Enter Password">
-      <h3>Role</h3>
-   <input type="text" name="role" id="role" value="Admin" readonly>
+    
 
     <br>
     <input type="submit" value="Login" id="button" class="w3-button w3-red w3-round-large"/>

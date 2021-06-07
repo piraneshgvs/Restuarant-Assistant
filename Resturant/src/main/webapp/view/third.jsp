@@ -24,7 +24,7 @@ margin:0;
 
 .navbar {
   overflow: hidden;
-  background-color: #333;
+  background-color:  #FFD801;
   position: fixed;
   top: 0;
   width: 100%;
@@ -51,7 +51,7 @@ margin:0;
 .navbar #aa {
   float:left;
   display: block;
-  color: #f2f2f2;
+  color: black;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -82,24 +82,24 @@ margin:0;
 <body>
    <div class="navbar">
     <a href="/" id="aa">Home</a>
-    <a href="/view/Menu" id="aa" class="btn btn-primary">Menu</a>
+    <a href="/view/Menu" id="aa" class="btn btn-success">Continue Fooding</a>
     
-    <label>Cart Page</label>
+ 
     <button type="button" class="btn btn-danger" onclick="logout()">LOG OUT</button>
   </div>
     
-   
+
 	<form:form action="saveOrder" modelAttribute="addfood" method="post">
 	 <div class="table">
 	<table class="table table-condensed">
 		<tr>
 			
-			<th>Id</th>
+			
 			<th>Name</th>
 			<th>Price</th>
 			<th>Quantity</th>
 			<th>Sub Total</th>
-			<th>Option</th>
+			<th>Remove</th>
 		</tr>
 		
 		<c:set var="total" value="0"></c:set>
@@ -134,10 +134,37 @@ margin:0;
 	</table>
 	</div>
 	<div class="place">
-	<input type="submit" class="btn btn-success" name="place" value="Place Order"/> 
+	<input type="submit" class="btn btn-primary btn-lg btn-block" name="place" value="Place Order"/> 
 	
 	</div> 
 	</form:form>
+			
+		
+
+	   <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyAMsPB_Bo91EvPkY44QYZygR8PUm787Jsc",
+    authDomain: "first-project-2e8f1.firebaseapp.com",
+    projectId: "first-project-2e8f1",
+    storageBucket: "first-project-2e8f1.appspot.com",
+    messagingSenderId: "723844954277",
+    appId: "1:723844954277:web:7d122bced191080036b54c",
+    measurementId: "G-9CRTRCXD8P"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  
+</script>	
+	<script src="../js/app.js"></script>
 	
 	
 

@@ -22,13 +22,15 @@
 
 .navbar {
   overflow: hidden;
-  background-color: #333;
+  background-color: #FFD801;
   position: fixed;
   top: 0;
   width: 100%;
 }
-.navbar a {
-  float:left;
+
+
+.navbar #aaa {
+  float:right;
   display: block;
   color: #f2f2f2;
   text-align: center;
@@ -36,33 +38,53 @@
   text-decoration: none;
   font-size: 17px;
 }
-.navbar .logo img{
-  height:5rem;
+.navbar button{
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
 }
-
 
 .navbar a:hover {
   background: #ddd;
   color: black;
 }
 
+.navbar #aa {
+  float:left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
+.navbar #aa:hover {
+  background: #ddd;
+  color: black;
+}
 </style>
 </head>
 <body>
 
 <div class="navbar">
-		<a href="/" class="logo"><img src="../images/logo-img.png" alt="Home"></a>
-		<a href="/view/Adminpage.jsp" id="aa" class="btn btn-success">Admin Home</a>
-		<a href="/inventoryform" id="aa" class="btn btn-success">Inventory Page</a>
-		<a href="/adminsummary" id="aa" class="btn btn-success" aria-disabled="true">AdminSummary Page</a>
-		</div>
+   <a href="/" id="aa">Home</a>
+    <a href="/view/Adminlogin.jsp" id="aaa"  class="btn btn-danger">LOG OUT</a>
+   <a href="/inventoryform" ><button id="aaa" class="btn btn-success">Inventory Page</button></a>
+  
+</div>
   <div class="date">  
   <form action="\adminsummary">  
   <label>Select your From Date:</label>
   <input type="date" name="date">
    <label>Select your To  Date:</label>
   <input type="date" name="date1">
-  <input type="submit">
+  <input class="btn btn-success" type="submit">
   </form>
   </div>
   

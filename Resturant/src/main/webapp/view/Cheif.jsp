@@ -10,7 +10,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Order Details Page</title>
 <link rel="stylesheet" href="../css/Cheif.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
@@ -23,42 +23,51 @@
 <body>
 <div class="navbar">
    <a href="/">Home</a>
+  <a href="./view/Adminlogin.jsp" id="logout" type="button"  class="btn btn-danger">LOG OUT</a>
+ 
    </div>
 
 
 
 
-	<table class="table table-hover" border="1">
-	
+	   <c:forEach items="${details }" var="detail" varStatus="loopCount">
+			
+
+	       <table>
+	            <colgroup>
+                 <col span="1" style="width: 10%;">
+                 <col span="1" style="width: 40%;">
+                  <col span="1" style="width: 10%;">
+                   <col span="1" style="width: 20%;">
+                </colgroup>
 			<tr>
 			
-				<td><th>Table No</th></td>
-				<td><th>Food Name</th></td>
-					<td><th>Quantity</th></td>
+				<th>Table No</th>
+				<th>Food Name</th>
+			    <th>Quantity</th>
 					
 			</tr>
 		
-			<c:forEach items="${details }" var="detail" varStatus="loopCount">
-			<c:forEach items="${detail}" var="order">
+			         <c:forEach items="${detail}" var="order">
 	                 <c:set var="string" value="${userList[(loopCount.count)-1]}"/>
 	                
 					<c:if test="${fn:substring(string,22,65)  eq order.user_id}">
 					<tr>
-					<td><th><c:out value="${order.tableNo}"></c:out></th></td>
-					<td><th><c:out value="${order.foodId}"></c:out></th></td>
-					<td><th><c:out value="${order.quantity}"></c:out></th></td>
+					<td><c:out value="${order.tableNo}"></c:out></td>
+					<td><c:out value="${order.foodId}"></c:out></td>
+					<td><c:out value="${order.quantity}"></c:out></td>
 					
 					</c:if>
-				
 		
 			</c:forEach>
-			<td><a href="/cheif/finish/${fn:substring(string,22,65) }"><button>Completed</button></a></td>
-			</tr>
-			<br>
+			<td><a href="/cheif/finish/${fn:substring(string,22,65) }"><button class="btn btn-success">Completed</button></a></td>
+			          </tr>
 	</c:forEach>
+
 	</table>
 
 <!-- <script type="text/javascript" src="../js/Cheif.js"></script> -->
+
 
 
 </body>
