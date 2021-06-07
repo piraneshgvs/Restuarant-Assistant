@@ -49,7 +49,7 @@ public class RestuarantImplDAO implements RestuarantDAO {
 	@Override
 	public List<Foods> getAllFoods() {
 		fList = new ArrayList<Foods>();
-		String query = "select * from food";
+		String query = "select * from food where available='yes'";
 		List<Map<String, Object>> foodRows = jdbcTemplate.queryForList(query);
 
 		for (Map<String, Object> foodRow : foodRows) {
@@ -62,6 +62,24 @@ public class RestuarantImplDAO implements RestuarantDAO {
 		}
 	
 		return fList;
+	}
+
+	@Override
+	public List<Foods> getAllFoods1() {
+		ArrayList<Foods> fList1 = new ArrayList<Foods>();
+		String query = "select * from food ";
+		List<Map<String, Object>> foodRows = jdbcTemplate.queryForList(query);
+
+		for (Map<String, Object> foodRow : foodRows) {
+			
+			int a = Integer.parseInt(String.valueOf(foodRow.get("food_id")));
+			String b = (String) foodRow.get("food_name");
+			int c = Integer.parseInt(String.valueOf(foodRow.get("price")));
+			
+			fList1.add(new Foods(a,b,c));
+		}
+	
+		return fList1;
 	}
 	
 	

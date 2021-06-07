@@ -10,7 +10,7 @@ import com.example.demo.model.Foods;
 @Component
 public interface LoginDAO {
 
-	
-	public String login(String id, String password,String role);
+	public int insertNewstaff(String name,String id,String password,String role);
+	public String login(String id, String password);
 	public List<Feedback> getAllFeedback();
 }

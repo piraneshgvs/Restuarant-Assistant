@@ -5,6 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -12,92 +13,144 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.example.demo.dao.InventaroyDAO;
 import com.example.demo.dao.LoginDAO;
+import com.example.demo.dao.RestuarantDAO;
 import com.example.demo.model.Foods;
 import com.example.demo.model.Ordersummary;
+import com.example.demo.model.StaffRole;
+
+import java.util.*;
 
 
 @Controller
 public class AdminController {
 	
+	
 	@Autowired
 	private Foods foods;
+	
 	@Autowired
 	private Ordersummary ordersummary;
 	
 	@Autowired
 	private InventaroyDAO inventaroyDAO;
+	
 	@Autowired
 	private LoginDAO loginDAO;
 	
+
+	@Autowired
+	private RestuarantDAO restuarantDao;
+	
+	@Autowired
+	private StaffRole staffRole;
+	
 	@RequestMapping("/inventoryform")  
     public String showform(ModelMap map){  
-    	map.addAttribute("addItem", foods);
-    	map.addAttribute("addMsg", "");
+    	map.addAttribute("allfoods",restuarantDao.getAllFoods1());
+    	map.addAttribute("variable",inventaroyDAO.getfoodstatus());
+    
     	return "Inventory"; 
     } 
 	
-	@RequestMapping(value="/insertfood", method = RequestMethod.POST, params = "submit")
-	public ModelAndView saveFooditem(@ModelAttribute("addItem") Foods f, ModelAndView mv) {
-		int result = inventaroyDAO.insertFooditem(f);
-		if(result>0)
-		{
-			mv.addObject("addMsg", "FoodItem Added Successfully");
-		}else {
-			mv.addObject("addMsg", "FoodItem not Added Successfully");
-		}
-		mv.setViewName("Inventory");
-		return mv;
+	@RequestMapping(value="/addfood", method = RequestMethod.POST)
+	public String saveFooditem(@RequestParam String foodname, @RequestParam int foodprice) {
+		int result = inventaroyDAO.insertFooditem(foodname, foodprice);
+		return "redirect:/inventoryform";
 	}
 	
-	@RequestMapping(value="/insertfood", method = RequestMethod.POST, params = "delete")
-	public ModelAndView removeFooditem(@ModelAttribute("addItem") Foods f,ModelAndView mv) {
-		System.out.println("foodid : "+f);
-		int result = inventaroyDAO.deleteFooditem(f.getFid());
-		if(result>0)
-		{
-			mv.addObject("addMsg", "FoodItem Removed Successfully");
-		}else {
-			mv.addObject("addMsg", "FoodItem not Removed Successfully");
-		}
-		mv.setViewName("Inventory");
-		return mv;
-	}
-	
-	@RequestMapping(value="/insertfood",method = RequestMethod.POST, params = "update")
-	public String updateFooditem(@ModelAttribute("addItem") Foods f) {
-		inventaroyDAO.updateFooditem(f);
-		return "Inventory";
+	@RequestMapping(value="/item/delete/{id}")
+	public String removeFooditem(@PathVariable("id") int id) {
 		
+		inventaroyDAO.deleteFooditem(id);
+		
+		return "redirect:/inventoryform";
 	}
+	
+	@RequestMapping(value="/item/edit/{id}")
+	public String editFooditem(@PathVariable("id") int id, ModelMap map) {
+		
+		List<String> foodie = inventaroyDAO.editFooditem(id);
+		map.addAttribute("foodname",foodie.get(0));
+		map.addAttribute("foodprice",foodie.get(1));
+		map.addAttribute("foodid",foodie.get(2));
+		map.addAttribute("allfoods",restuarantDao.getAllFoods());
+
+	
+		
+		return "Inventory";
+	}
+	
+	@RequestMapping(value="/updateform", method=RequestMethod.POST)
+	public String updateFooditem(@RequestParam String name, @RequestParam String price, @RequestParam int id, ModelMap map) {
+		
+	 inventaroyDAO.updateFoodItem(id,name,price);
+		
+		
+		return "redirect:/inventoryform";
+	}
+	
+	@RequestMapping(value="/foodnotavailable/{id}")
+	public String NotAvailableFooditem(@PathVariable("id") int id) {
+
+
+	 inventaroyDAO.updateFoodAvailable(id); 
+		return "redirect:/inventoryform";
+	}
+	
+	@RequestMapping(value="/foodavailable/{id}")
+	public String AvailableFooditem(@PathVariable("id") int id) {
+
+
+	 inventaroyDAO.updateFoodAvailable1(id);
+		  
+		
+		return "redirect:/inventoryform";
+	}
+	
+	
+
 	
 	@RequestMapping("/adminsummary")
-	public String Ordersummary(ModelMap modelMap) {
+	public String Ordersummary(ModelMap modelMap,@RequestParam(required=false,name="date") String date,@RequestParam(required=false,name="date1") String date1) {
 
-		modelMap.addAttribute("summary", inventaroyDAO.getOrdersummary());
-		modelMap.addAttribute("Total", inventaroyDAO.getGrandtotal());
+		modelMap.addAttribute("summary", inventaroyDAO.getOrdersummary(date,date1));
+		modelMap.addAttribute("Total", inventaroyDAO.getGrandtotal(date,date1));
 	
 	return "Adminsummary";	
 	}
+	
 
 	
 	
 	@RequestMapping(value="/login", method = RequestMethod.POST)
-	public String login(@RequestParam String id, @RequestParam String password, @RequestParam String role, ModelMap modelMap){
+	public String login(@RequestParam String id, @RequestParam String password,  ModelMap modelMap){
 		
-		String ans = loginDAO.login(id, password,role);
+		String ans = loginDAO.login(id, password);
 		if(ans.equals("false")) {
 			modelMap.addAttribute("message", "Please check your Phone nuumber and password");
 			return "Adminlogin";
 		}
 		else {
-			modelMap.addAttribute("title", ans);
-			modelMap.put("listfeedback", loginDAO.getAllFeedback());
-			return "Adminpage";
+              String page = staffRole.getPage();
+         System.out.println(page);
+              if(page.equals("Admin")) {
+            	  modelMap.addAttribute("name", staffRole.getName());
+            	  return "Adminpage";
+              }
+              else {
+            	  modelMap.addAttribute("name", staffRole.getName());
+            	  return "Cheif";
+              }
 		}
 		
 		
 		
 
 		
+	}
+	@RequestMapping("/addstaff")
+	public String addstaff(@RequestParam(required=false,name="name") String name, @RequestParam(required=false,name="phone") String phone, @RequestParam(required=false,name="password") String password, @RequestParam(required=false,name="staff_role") String staff_role) {
+		int result = loginDAO.insertNewstaff(name,phone, password, staff_role);
+		return "Addstaff";
 	}
 }

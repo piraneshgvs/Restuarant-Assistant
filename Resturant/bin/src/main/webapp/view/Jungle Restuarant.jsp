@@ -74,54 +74,15 @@
 
     <div class="content" data-aos="fade-left">
         <h3>a word about us</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea accusantium eligendi a totam consequatur! Quis minus amet iusto iure repudiandae, incidunt enim fugiat ipsa? Iure quam et quo quos quisquam!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint totam pariatur saepe sit nostrum consequuntur, praesentium accusamus harum voluptate soluta.</p>
-        <a href="#"><button class="btn">learn more</button></a>
+        <p>We are providing food to the people since 1960.</p>
+        <p>The Reason why we popular because of our way of serving the food and maintaining hygiene throughout the Restuarant.</p>
     </div>
 
 </section>
 
 <!-- about section ends -->
 
-<section class="menu" id="menu">
 
-<h1 class="heading"> our delicious <span>menu</span> </h1>
-
-<ul class="list" data-aos="fade-down">
-    <li class="btn" data-src="../images/menu1.jpg">breakfast</li>
-    <li class="btn active" data-src="../images/menu2.jpg">lunch</li>
-    <li class="btn" data-src="../images/menu3.jpg">dinner</li>
-    <li class="btn" data-src="../images/menu4.jpg">dessert</li>
-</ul>
-
-<div class="row" data-aos="fade-right">
-
-    <div class="image" data-aos="fade-left">
-        <img src="../images/menu2.jpg" id="menu-img" alt="">
-    </div>
-
-    <div class="content">
-        <div class="info">
-            <h3> <span>01.</span> we serve best food in the country </h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum, vero?</p>
-        </div>
-        <div class="info">
-            <h3> <span>02.</span> we serve best food in the country </h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum, vero?</p>
-        </div>
-        <div class="info">
-            <h3> <span>03.</span> we serve best food in the country </h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum, vero?</p>
-        </div>
-        <div class="info">
-            <h3> <span>04.</span> we serve best food in the country </h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum, vero?</p>
-        </div>
-    </div>
-
-</div>
-
-</section>
 
 <!-- popular section starts  -->
 
@@ -133,7 +94,7 @@
 
     <div class="box" data-aos="fade-right">
         <img src="../images/product1.jpg" alt="">
-        <h3>delicious food</h3>
+        <h3>Pizza</h3>
         <div class="stars">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
@@ -141,27 +102,27 @@
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
         </div>
-        <div class="price">$30.00</div>
-        <a href="#"><button class="btn">add to cart</button></a>
+        <div class="price">Rs.150.00</div>
+        <a href="../view/index.jsp"><button class="btn">add to cart</button></a>
     </div>
 
     <div class="box" data-aos="fade-left">
         <img src="../images/product2.jpg" alt="">
-        <h3>delicious food</h3>
+        <h3>Chicken Briyani</h3>
         <div class="stars">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
+          
         </div>
-        <div class="price">$30.00</div>
-        <a href="#"><button class="btn">add to cart</button></a>
+        <div class="price">Rs.120.00</div>
+        <a href="../view/index.jsp"><button class="btn">add to cart</button></a>
     </div>
 
     <div class="box" data-aos="fade-right">
         <img src="../images/product3.jpg" alt="">
-        <h3>delicious food</h3>
+        <h3>Fish Fry</h3>
         <div class="stars">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
@@ -169,13 +130,13 @@
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
         </div>
-        <div class="price">$30.00</div>
-        <a href="#"><button class="btn">add to cart</button></a>
+        <div class="price">Rs.250.00</div>
+        <a href="../view/index.jsp"><button class="btn">add to cart</button></a>
     </div>
 
     <div class="box" data-aos="fade-left">
         <img src="../images/product4.jpg" alt="">
-        <h3>delicious food</h3>
+        <h3>Chappathi</h3>
         <div class="stars">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
@@ -183,8 +144,8 @@
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
         </div>
-        <div class="price">$30.00</div>
-        <a href="#"><button class="btn">add to cart</button></a>
+        <div class="price">Rs.50.00</div>
+        <a href="../view/index.jsp"><button class="btn">add to cart</button></a>
     </div>
 
 </div>
@@ -202,33 +163,33 @@
 <div class="box-container">
 
     <div class="box" data-aos="fade-up">
-        <img src="../images/img1.jpg" alt="">
-        <h3>delicious food</h3>
+        <img src="../images/im1.jpg" alt="">
+        <h3>Burger</h3>
     </div>
 
     <div class="box" data-aos="fade-up">
         <img src="../images/img2.jpg" alt="">
-        <h3>delicious food</h3>
+        <h3>Briyani</h3>
     </div>
 
     <div class="box" data-aos="fade-up">
         <img src="../images/img3.jpg" alt="">
-        <h3>delicious food</h3>
+        <h3>Chappathi</h3>
     </div>
 
     <div class="box" data-aos="fade-up">
         <img src=".//images/img4.jpg" alt="">
-        <h3>delicious food</h3>
+        <h3>Noddles</h3>
     </div>
 
     <div class="box" data-aos="fade-up">
         <img src="../images/img5.jpg" alt="">
-        <h3>delicious food</h3>
+        <h3>Dosa</h3>
     </div>
 
     <div class="box" data-aos="fade-up">
         <img src="../images/img6.jpg" alt="">
-        <h3>delicious food</h3>
+        <h3>Pizza</h3>
     </div>
 
 </div>
@@ -281,7 +242,7 @@
 
     </div>
 
-    <h1 class="credit">create by <a href="#">mr. web designer</a> all rights reserved. </h1>
+   
 
 </div>
 

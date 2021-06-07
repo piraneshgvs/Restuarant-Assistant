@@ -9,15 +9,21 @@ import org.springframework.stereotype.Component;
 import com.example.demo.model.Foods;
 import com.example.demo.model.Ordergrandtotal;
 import com.example.demo.model.Ordersummary;
+import com.example.demo.model.Status;
 
 @Component
 public interface InventaroyDAO {
 	
-	public int insertFooditem(Foods foods);
+
+	public int insertFooditem(String foodname, int foodprice);
 	public int deleteFooditem(int foods);
-	public int updateFooditem(Foods foods);
-	public List<Ordersummary> getOrdersummary();
-	public List<Ordergrandtotal> getGrandtotal();
+	public List<String> editFooditem(int id);
+	public List<Ordersummary> getOrdersummary(String date,String date1);
+	public List<Ordergrandtotal> getGrandtotal(String date,String date1);
+	public void updateFoodItem(int id, String name, String price);
+	public void updateFoodAvailable(int id);
+	public void updateFoodAvailable1(int id);
+	public List<Status> getfoodstatus();
 	
 
 }

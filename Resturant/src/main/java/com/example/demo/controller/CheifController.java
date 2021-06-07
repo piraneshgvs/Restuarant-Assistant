@@ -34,18 +34,13 @@ public class CheifController {
 	@Autowired
 	private LoginDAO loginDAO;
 	
-	@RequestMapping(value = "cheif/{id}", method = RequestMethod.GET)
-	public String tableView(@PathVariable("id") int id, ModelMap modelMap) {
-	
-		
-		
-		List<Orders> order = cheifDAO.showTable(id);
-		
-		modelMap.put("orderlist", order);
-		modelMap.put("tableno", CutomerId.getCutid());
-		modelMap.put("enable","disabled");
-	   System.out.println("cut"+CutomerId.getCutid());
+	@RequestMapping(value = "/cheif", method = RequestMethod.GET)
+	public String tableView(ModelMap modelMap) {
+	    List<List<Orders>> detail = cheifDAO.showTable();
+	   modelMap.addAttribute("userList",cheifDAO.userId());
+		modelMap.addAttribute("details",detail);
 		return "Cheif";
+		
 	
 	}
 	
@@ -58,23 +53,9 @@ public class CheifController {
 		cheifDAO.updateTable(id);
 		modelMap.put("enable","enabled");
 						
-		return "Cheif";
+		return "redirect:/cheif";
 	
 	}
 	
-	@RequestMapping(value="cheif/login", method = RequestMethod.POST)
-	public String login(@RequestParam String id, @RequestParam String password, @RequestParam String role, ModelMap modelMap){
-		
-		String ans = loginDAO.login(id, password,role);
-		if(ans.equals("false")) {
-			modelMap.addAttribute("message", "Please check your Phone nuumber and password");
-			return "Cheiflogin";
-		}
-		else {
-			modelMap.addAttribute("title", ans);
-			
-			return "Cheif";
-		}
-
-}
+	
 }

@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@page import="com.example.demo.model.Status"%>
+   
     <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%> 
 <!DOCTYPE html>
@@ -19,13 +21,16 @@
 .navbar {
   z-index: 1;
 }
-
+.navbar .logo img{
+  height:5rem;
+}
 .navbar {
   overflow: hidden;
   background-color: #333;
   position: fixed;
   top: 0;
   width: 100%;
+
 }
 .navbar a {
   float:left;
@@ -42,46 +47,75 @@
   background: #ddd;
   color: black;
 }
+
+#view{
+padding-top:10%;
+}
 </style>
+
    
 </head>
 <body>
- <div class="navbar">
-    <a href="/">Home</a>
-    </div>
 
-<form:form action="/insertfood" modelAttribute="addItem">
-       <div class="table">
-		<table  class="table table-hover">
-			<tr>
-				<td>Food ID :</td>
-				<td><form:input name="fid" path="fid" /></td>
+ <div class="navbar">
+	<a href="/" class="logo"><img src="../images/logo-img.png" alt="Home"></a>
+	<a href="/view/Adminlogin.jsp" id="aa" class="btn btn-success">Admin Home</a>
+	<a href="/inventoryform" id="aa" class="btn btn-success">Inventory Page</a>
+	<a href="/adminsummary" id="aa" class="btn btn-success" aria-disabled="true">AdminSummary Page</a>
+    <table class="table table-hover">
+    	<tr>
+		<form:form action="/addfood">
+				<td><th><input id="foodname" name="foodname"></th></td>
+				<td><th><input id="foodprice" name="foodprice"></th></td>
+				<td><th><input type="submit" value="ADD FOOD"></th></td>
+		</form:form>
 			</tr>
-			<tr>
-				<td>Food Name :</td>
-				<td><form:input path="fName" /></td>
-			</tr>
-			<tr>
-				<td>Food Price :</td>
-				<td><form:input path="fPrice" /></td>
-			</tr>
-			
-			<tr>
-				<td></td>
-				<td><input type="reset" class="btn btn-warning" value="Clear"></td>
-				<td><input type="submit" class="btn btn-primary" name="update" value="Update Food"></td>
-		        <td><input type="submit" class="btn btn-danger" name="delete" value="Remove Food"></td>
-		        <td><input type="submit" class="btn btn-success" name="submit" value="Add Food"></td>
-			</tr>
-		</table>
-		</div>
 		
-	</form:form>
+				<tr>
+					<form:form action="/updateform" method="post">
+				<td><th><input id="name" name="name" value="${foodname }"></th></td>
+				<td><th><input id="price" name="price" value="${foodprice }"></th></td>
+				<td><th><input id="id" name="id" value="${foodid }"></th></td>
+				<td><th><input type="submit" value="UPDATE FOOD"></th></td>
+		</form:form>
+			</tr>
+			</table>
+    </div>
+    <div id="view">
+<input type="text" id="" name="phone" readonly>
+ <table class="table table-hover">
 	
+			<tr>
+				<td><th>Food Name</th></td>
+				<td><th>Food Price</th></td>
+				<td><th>Edit</th></td>
+				<td><th>Remove</th></td>
+			</tr>
+		
+		
+			
+			<c:forEach items="${allfoods }" var="food" varStatus="loopCount">
+	<tr>
+
+					<td><th><c:out value="${food.fName}"></c:out></th></td>
+					<td><th><c:out value="${food.fPrice}"></c:out></th></td>
+					<td><th><a href="${pageContext.request.contextPath }/item/edit/${food.fid}"><button type="button" class="btn btn-info">Edit</button></a></th></td>
+					<td><th><a href="${pageContext.request.contextPath }/item/delete/${food.fid}"><button type="button" class="btn btn-danger">Remove</button></a></th></td>
+        		    <c:set var="string" value="${variable[(loopCount.count)-1]}"></c:set>
+        		    <td><th>${string}</th></td>
+        		     <td><th><a href="${pageContext.request.contextPath }/foodnotavailable/${food.fid}"><button type="button" class="btn btn-warning" <c:if test="${string =='no'}"><c:out value="disabled='disabled'"/></c:if> >NOT AVAILABLE</button></a></th></td>
+        		   
+			         <td><th><a href="${pageContext.request.contextPath }/foodavailable/${food.fid}"><button type="button" class="btn btn-success">AVAILABLE</button></a></th></td>
+			        
+			</tr>
+			</c:forEach>
+	
+	</table>
 	<br><br>
-	
+	</div>
 	
 <div>${addMsg}</div>
+
 
 
 </body>

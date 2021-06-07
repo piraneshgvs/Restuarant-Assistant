@@ -2,6 +2,9 @@
 body {
   overflow: hidden; 
 }
+.date{
+	padding:100px;
+}
 
 .hero-image .content {
   position: absolute;

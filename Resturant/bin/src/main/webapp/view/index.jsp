@@ -9,17 +9,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="../css/index_style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>Document</title>
 </head>
 <body>
-  <h5><mark>Jungle Restuarant</mark></h5>
+ <div class="navbar">
+   <a href="/">Home</a>
+   </div>
 
-  <div id="otpbox">
+  <div class="otpbox">
     <!-- Add two inputs for "phoneNumber" and "code" -->
-    <input type="tel" id="phoneNumber" class="textbox" placeholder="+911234567890" onfocus="this.placeholder=''" onblur="this.placeholder='+911234567890'"/><br>
+    <label class="phone">Enter Your Phone Number : </label>
+    <input type="tel" id="phoneNumber" class="textbox" placeholder="+91**********" onfocus="this.placeholder=''" onblur="this.placeholder='+91**********'"/><br>
     <button id="sign-in-button" class="button" onclick="submitPhoneNumberAuth()">
       <span>SEND CODE</span>
-    </button><br>  
+    </button><br> 
+    <label class="phone">Enter Your Received OTP :</label> 
     <input type="text" id="code" class="textbox" placeholder="ENTER CODE" onfocus="this.placeholder=''" onblur="this.placeholder='ENTER CODE'"/><br>
     <button id="confirm-code" class="button" onclick="submitPhoneNumberAuthCode()">
    <span>CONFIRM</span> 

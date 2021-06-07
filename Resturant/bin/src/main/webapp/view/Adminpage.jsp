@@ -7,6 +7,15 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>${title }</title>
+  <link rel="stylesheet" href="../css/Adminpage.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
 $(document).ready(function()
@@ -20,14 +29,15 @@ $("#auto")
 </script>
 </head>
 <body>
-
-
- <a href="/inventoryform"><button type="button" class="btn btn-success">Inventory Page</button></a>
-    <a href="/adminsummary"><button type="button" class="btn btn-success">AdminSummary Page</button></a>
-<div>
+<div class="navbar">
+   <a href="/">Home</a>
+   <a href="/inventoryform" id="aa" class="btn btn-success">Inventory Page</a>
+   <a href="/adminsummary" id="aa" class="btn btn-success">AdminSummary Page</a>
+   </div>
+<div class="Main">
 
 <h1>Feedback From Customers</h1>
-<table border="1">
+<table border="1" align="center">
 	
 			<tr>
 				<td><th>Phone Number</th></td>

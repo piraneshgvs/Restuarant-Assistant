@@ -20,6 +20,9 @@
    
 </head>
 <body>
+<div class="navbar">
+   <a href="/">Home</a>
+   </div>
     
     <div class="container">
         <div class="row">
@@ -28,6 +31,7 @@
         <div class="row">
                 <h4 style="text-align:center">We'd love to hear from you!</h4>
         </div>
+        <div class="Textbox">
         <form action="/feedback" method="post">
         <div class="row input-container">
               
@@ -42,6 +46,7 @@
                 </div>
         </div>
         </form>
+        </div>
     </div>
    
 </body>

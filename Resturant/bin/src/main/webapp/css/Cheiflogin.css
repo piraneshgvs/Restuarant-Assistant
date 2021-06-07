@@ -1,13 +1,40 @@
-@charset "ISO-8859-1";
 
-
-body {
-  background-image:url("../images/Cheif8.jpg");
-  margin:0px;
-  font-family: 'Ubuntu', sans-serif;
-	background-size:cover;
-	padding:30px;
+.img{
+	
+    bottom:500px; 
+    position: relative;
+    right: -300px;
+    margin:auto;
+    
 }
+.navbar {
+  z-index: 1;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float:left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
 h1, h2, h3, h4, h5, h6, a {
   margin:0; padding:0;
 }
@@ -16,12 +43,12 @@ h1{
 }
 .login {
   margin:0 auto;
-  max-width:300px;
+  max-width:400px;
 }
 .login-header {
-  color:#fff;
+  color:black;
   text-align:center;
-  font-size:300%;
+  font-size:250%;
 }
 /* .login-header h1 {
    text-shadow: 0px 5px 15px #000; 
@@ -35,11 +62,11 @@ h1{
 .login-form h3 {
   text-align:left;
   margin-left:40px;
-  color:#fff;
+  color:black;
 }
 .login-form {
   box-sizing:border-box;
-  padding-top:15px;
+  padding-top:10px;
 	padding-bottom:10%;
   margin:5% auto;
   text-align:center;
