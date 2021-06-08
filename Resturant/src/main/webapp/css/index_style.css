@@ -1,14 +1,13 @@
-@charset "ISO-8859-1";
-
 body{
-   
-   background-image:url("../images/yellow.jpg");
-      background-size:"cover";
-   background-repeat:no-repeat;
-
+	background-image:url("../images/Jungle3.jpg");
+	background-size:cover;
+    
+  
 }
+
+
 .phone{
-	color:White;
+	color:white;
 	font-size:150%;
 }
 
@@ -22,6 +21,7 @@ body{
     height: 250px;
     margin:auto;
     bottom:-100px;
+   
     
 }
 .navbar {

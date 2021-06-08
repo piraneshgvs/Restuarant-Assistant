@@ -1,14 +1,11 @@
 @charset "ISO-8859-1";
 
-.navbar .logo img{
-  height:5rem;
-}
+
 body {
   background-image:url("../images/Admin2.jpg");
-  margin:0px;
-  font-family: 'Ubuntu', sans-serif;
+ 
 	background-size:cover;
-	padding:30px;
+	
 }
 h1, h2, h3, h4, h5, h6, a {
   margin:0; padding:0;

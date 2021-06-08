@@ -38,7 +38,7 @@
             <li><a href="#menu">menu</a></li>
             <li><a href="#popular">popular</a></li>
             <li><a href="#gallery">gallery</a></li>
-            <li><a href="./view/Adminlogin.jsp">Staff</a></li>
+            <li><a href="./view/login.jsp">Staff</a></li>
             <li><a href="./view/index.jsp">Users</a></li>
         </ul>
     </nav>

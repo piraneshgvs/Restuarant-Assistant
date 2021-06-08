@@ -74,7 +74,7 @@
 
 <div class="navbar">
    <a href="/" id="aa">Home</a>
-    <a href="/view/Adminlogin.jsp" id="aaa"  class="btn btn-danger">LOG OUT</a>
+    <a href="/view/login.jsp" id="aaa"  class="btn btn-danger">LOG OUT</a>
    <a href="/inventoryform" ><button id="aaa" class="btn btn-success">Inventory Page</button></a>
   
 </div>
@@ -87,8 +87,13 @@
   <input class="btn btn-success" type="submit">
   </form>
   </div>
-  
-
+   <div class="date1">
+     <label style="color:blue;">FROM:</label>
+     <input style="color:red;"type="date" value="${date}" readonly>
+     
+     <label  style="color:blue;">TO:</label>
+     <input style="color:red;" type="date" value="${date1}" readonly>
+     </div>
     
  
 		<table class="table table-hover">
@@ -115,7 +120,7 @@
 			<br>
 			
 		</table >
-		<table align="right">
+		<table class="grand" align="center">
 		   
 			<tr>
 			<td><th>Grand Total</th></td>

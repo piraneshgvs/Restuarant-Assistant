@@ -85,7 +85,7 @@
 <body>
  <div class="navbar">
    <a href="/" id="aa">Home</a>
-    <a href="./view/Adminlogin.jsp" id="aaa"  class="btn btn-danger">LOG OUT</a>
+    <a href="./view/login.jsp" id="aaa"  class="btn btn-danger">LOG OUT</a>
    <a href="./view/Adminsummary.jsp" ><button id="aaa" class="btn btn-success">AdminSummary Page</button></a>
   
 

@@ -112,7 +112,8 @@ public class AdminController {
 	
 	@RequestMapping("/adminsummary")
 	public String Ordersummary(ModelMap modelMap,@RequestParam(required=false,name="date") String date,@RequestParam(required=false,name="date1") String date1) {
-
+        modelMap.addAttribute("date",date);
+        modelMap.addAttribute("date1",date1);
 		modelMap.addAttribute("summary", inventaroyDAO.getOrdersummary(date,date1));
 		modelMap.addAttribute("Total", inventaroyDAO.getGrandtotal(date,date1));
 	

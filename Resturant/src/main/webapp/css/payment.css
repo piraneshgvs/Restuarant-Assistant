@@ -5,26 +5,67 @@
   padding: 420px 400px; /* Some padding */
   
 }
+body {
+margin:0;
+overflow:hidden;
+}
+.navbar {
+  z-index: 1;
+}
 
+.navbar {
+  overflow: hidden;
+  background-color:  #FFD801;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float:right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.navbar button{
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.navbar #aa {
+  float:left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
+.navbar #aa:hover {
+  background: #ddd;
+  color: black;
+}
+
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+.navbar button:hover {
+  background: #ddd;
+  color: black;
+}
+ 
+     
     
-      .marq {
-         
-          font-size: 36px;
-          font-weight: bold;
-          color: white;
-      }
-      .feedbackbtn{
-          position:absolute;
-          bottom:0;
-          font-size: 36px;
-          font-weight: bold;
-          color: white;
-      }
-      body{
-        
-         
-      }
-      
  
 
 

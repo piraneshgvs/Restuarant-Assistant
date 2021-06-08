@@ -1,29 +1,12 @@
 
-body {
-  overflow: hidden; 
-}
+
 .date{
 	padding:100px;
 }
-
-.hero-image .content {
-  position: absolute;
-  bottom: 0;
-  background-size:cover;
-  
-  height: 100%; 
-  background: rgba(0, 0, 0, 0.5); /* Black background with 0.25 opacity */
-  color: #ff6a00;
-  font-size:15px;
-  width: 100%;
-  padding: 200px;
-  background-repeat: no-repeat;
-}        
-.Grand{
-	color:aqua;
-	font-size:15px;
+.date1{
+	padding:20px;
 }
-.marq{
-	color:greenyellow;
-	font-size:15px;
+
+.grand{
+	background-color:aqua;
 }
