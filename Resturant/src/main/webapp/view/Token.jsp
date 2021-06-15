@@ -21,8 +21,9 @@
   <button type="button" class="btn btn-danger" onclick="logout()">LOG OUT</button>
    <a href="/">Home</a>
    </div>
-
+  <div class="heading"><h1>Welcome To Jungle Restaurant</h1></div>
 <div class="verify">
+
 <form action="/phonenumber" method="post">
 <input type="text" id="phone" name="phone" readonly><br><br>
 <input type="submit" id="button" class="btn btn-primary" value="Confirm Phone Number To Continue"/>

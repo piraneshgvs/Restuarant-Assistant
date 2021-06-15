@@ -1,5 +1,6 @@
 // Create a Recaptcha verifier instance globally
         // Calls submitPhoneNumberAuth() when the captcha is verified
+      
         
            
         window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier(
@@ -40,10 +41,24 @@
             })
         }
         function logout(){
-            firebase.auth().signOut().then(()=>{window.location.href="../view/index.jsp"}).catch((err)=>{
+          $.ajax({
+          url:"/logout",
+          type:'POST',
+          
+          });
+        
+            firebase.auth().signOut().then(()=>
+            {
+          
+            window.location.href="../view/index.jsp"
+            
+            
+            }
+            ).catch((err)=>{
                 console.log(err)
             })
         }
+        
 
         //This function runs everytime the auth state changes. Use to verify if the user is logged in
         firebase.auth().onAuthStateChanged( (user)=> {

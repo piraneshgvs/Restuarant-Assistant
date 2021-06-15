@@ -9,11 +9,37 @@
 	font-size:25px;
 }
 .table{
-	padding:80px;
+	padding:50px;
 	position:responsive;
 	right:-150px;
-}
-body{
-
 	
+}
+.tech-slideshow {
+  height: 200px;
+  max-width: 1300px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+}
+.tech-slideshow div {
+
+   height: 200px;
+  width: 4526px;
+  background: url(../images/im1.jpg);
+  position: absolute;
+  top: 40;
+  left: 0;
+  height:100%;
+  transform: translate3d(0, 0, 0);
+}
+.tech-slideshow .mover-1 {
+  animation: moveSlideshow 30s linear infinite;
+}
+
+
+@keyframes moveSlideshow {
+  100% { 
+    transform: translateX(-66.6666%);  
+  }
 }

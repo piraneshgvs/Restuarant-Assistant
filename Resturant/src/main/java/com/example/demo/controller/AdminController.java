@@ -129,7 +129,7 @@ public class AdminController {
 		String ans = loginDAO.login(id, password);
 		if(ans.equals("false")) {
 			modelMap.addAttribute("message", "Please check your Phone nuumber and password");
-			return "Adminlogin";
+			return "login";
 		}
 		else {
               String page = staffRole.getPage();

@@ -1,5 +1,6 @@
 package com.example.demo.model;
 
+
 import org.springframework.stereotype.Component;
 
 @Component
@@ -7,6 +8,7 @@ public class Orders {
 
 	private String user_id;
 	private String foodId;
+	
 	private int tableNo;
 	private int quantity;
 	public String getUser_id() {

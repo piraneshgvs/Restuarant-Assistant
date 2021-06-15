@@ -23,7 +23,7 @@
   
 </head>
 <body>
-
+   
   
   <div class="navbar">
     <a href="/" id="aa">Home</a>
@@ -38,7 +38,7 @@
            
   
   
-    
+   <input type="text" value="total"/> 
     
  
 
@@ -70,6 +70,9 @@
   
 </script>	
 	<script src="../js/app.js"></script>
+	<script src="../js/third_js.js"></script>
+	<script src="../js/payment.js"></script>
+	
 	
 	
 </body>

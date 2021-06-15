@@ -1,13 +1,13 @@
 body{
-	background-image:url("../images/Jungle3.jpg");
-	background-size:cover;
+	background-image:url("../images/index.jpg");
+	background-size:1600px 800px;
     
   
 }
 
 
 .phone{
-	color:white;
+	color:black;
 	font-size:150%;
 }
 
@@ -20,7 +20,7 @@ body{
     max-width: 400px;
     height: 250px;
     margin:auto;
-    bottom:-100px;
+    bottom:-130px;
    
     
 }

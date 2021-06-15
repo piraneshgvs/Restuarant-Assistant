@@ -23,7 +23,7 @@
 <body>
 <div class="navbar">
    <a href="/">Home</a>
-  <a href="./view/Adminlogin.jsp" id="logout" type="button"  class="btn btn-danger">LOG OUT</a>
+  <a href="./view/login.jsp" id="logout" type="button"  class="btn btn-danger">LOG OUT</a>
  
    </div>
 

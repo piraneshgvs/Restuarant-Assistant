@@ -18,9 +18,8 @@ public class OrderImplDAO implements OrderDAO{
 
 	@Override
 	public int insertFoodlist(List<Item> cart, int tableno) {
-		int out=1;
 		int sum=0;
-		
+		int out=0;
 		System.out.println("userid:"+Phone.getUserid());
 
 		String query = "insert into cart(tabno,user_id,fid,fQua,fTot,fgtotal) values(?,?,?,?,?,?)";
@@ -32,13 +31,10 @@ public class OrderImplDAO implements OrderDAO{
 		sum+=p;
 		
 		Object[] args = new Object[] { tableno, Phone.getUserid(), cart.get(i).getProduct().getFid(), cart.get(i).getQuantity(), p, sum };
-				out = jdbcTemplate.update(query, args);
-		if(out<0) {
-			return out;
-		}
+				 out = jdbcTemplate.update(query, args);
+		
 
 		}
-
 		return out;
 
 	}

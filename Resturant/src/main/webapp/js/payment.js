@@ -1,10 +1,9 @@
 
 function paymentProcess() {
 
-        var amount=localStorage.getItem("amount");
+        var amount=localStorage.getItem("total");
         amount=amount*100;
-        console.log(amount);
-       
+      
 
     var options = {
         "key": "rzp_test_PpOinqLyVBHOcP", // Enter the Key ID generated from the Dashboard

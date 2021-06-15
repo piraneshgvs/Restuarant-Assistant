@@ -18,77 +18,20 @@
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <style>
-.navbar {
-  z-index: 1;
-}
 
-.navbar {
-  overflow: hidden;
-  background-color: #FFD801;
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-
-.navbar #aaa {
-  float:right;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-.navbar button{
-  float: right;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.navbar a:hover {
-  background: #ddd;
-  color: black;
-}
-
-.navbar #aa {
-  float:left;
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-
-.navbar #aa:hover {
-  background: #ddd;
-  color: black;
-}
-.main {
-  padding: 16px;
-  margin-top: 30px;
- }
- #view{
- padding-top:25%;
- }
 
 </style>
 
    
 </head>
 <body>
+
  <div class="navbar">
    <a href="/" id="aa">Home</a>
     <a href="./view/login.jsp" id="aaa"  class="btn btn-danger">LOG OUT</a>
    <a href="./view/Adminsummary.jsp" ><button id="aaa" class="btn btn-success">AdminSummary Page</button></a>
-  
-
+   </div>
+   <div class="Maintable">
     <table class="table table-hover">
     <tr><td><th>Add the Food Item</th></td></tr>
     <tr>
@@ -106,21 +49,23 @@
 			</tr>
 		  <tr><td><th>Edit the Food Item(Click the edit button to edit the food item)</th></td></tr>
     <tr>
+    <td><th>Food ID</th></td>
     <td><th>Edit the Food Name</th></td>
     <td><th>Edit the Food Price</th></td>
     </tr>
 				<tr>
 					<form:form action="/updateform" method="post">
+			    <td><th><input id="id" name="id" value="${foodid }" readonly></th></td>
 				<td><th><input id="name" name="name" value="${foodname }"></th></td>
 				<td><th><input id="price" name="price" value="${foodprice }"></th></td>
-				<td><th><input id="id" name="id" value="${foodid }"></th></td>
 				<td><th><input type="submit" class="btn btn-success" value="UPDATE FOOD"></th></td>
 		</form:form>
 			</tr>
 			</table>
-    </div>
+			</div>
+   
     <div id="view">
-
+    <div class="innertube">
  <table class="table table-hover">
 	
 			<tr>
@@ -151,8 +96,10 @@
 	</table>
 	<br><br>
 	</div>
+	</div>
 	
-<div>${addMsg}</div>
+	
+
 
 
 
