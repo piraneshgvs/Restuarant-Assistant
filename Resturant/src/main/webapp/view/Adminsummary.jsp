@@ -88,27 +88,28 @@ if(username == null)
   <div class="date">  
   <form action="\adminsummary">  
   <label>Select your From Date:</label>
-  <input style="font-size:160%;" type="date" name="date">
+  <input  type="date" name="date">
    <label>Select your To  Date:</label>
-  <input style="font-size:160%;"type="date" name="date1">
+  <input type="date" name="date1">
   <input class="btn btn-success" type="submit">
   </form>
   </div>
    <div class="date1">
      <label>FROM:</label>
-     <input style="font-size:160%;color:blue;"type="date" value="${date}" readonly>
+     <input style="color:blue;"type="date" value="${date}" readonly>
      
      <label>TO:</label>
-     <input style="font-size:160%;color:blue;" type="date" value="${date1}" readonly>
+     <input style="color:blue;" type="date" value="${date1}" readonly>
+     </div>
      <div class="value">
 		<c:forEach items="${Total}" var="admin">
-		<label style="color:darkgreen;">Grand Total = </label>
-	    <c:out value="${admin.total}"></c:out>
+		<label>Grand Total = </label>
+	    <c:out value="INR ${admin.total}"></c:out>
 		</c:forEach>
      </div>
-    
+   
  
-		<table>
+		<table align="center">
 		 
 	
 			<tr>

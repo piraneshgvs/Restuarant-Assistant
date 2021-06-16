@@ -9,24 +9,26 @@ body{
 	font-size:160%;
 }
 .date1{
-	padding:0px;
+	position:relative;
+	bottom:50px;
 	text-align:center;
 	color:darkblue;
 	font-size:160%;
 }
 .value{
-	
-	
+	position:relative;
+	bottom:30px;
+	text-align:center;
+	color:#808040;
+	font-size:160%;
 }
 
-table {
- position: relative;
-    right: -430px;
-  
-}
+
+
 td{
 	font-size:20px;
 }
+
 
 
 table,th, td {
