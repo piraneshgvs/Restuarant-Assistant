@@ -109,14 +109,19 @@ public class PageController {
 	
 	@RequestMapping(value="/phonenumber", method=RequestMethod.POST)
 	public String insertuser(@RequestParam String phone) {
-		System.out.println(phone);
-		phoneDAO.insertUser(phone);
+	    phoneDAO.insertUser(phone);
 		return "redirect:/view/Menu";
 	}
 	@RequestMapping("/logout")
 	public void logout(HttpSession session) {
 		session.invalidate();
 	}
+	@RequestMapping("/sessionlock")
+	public void lock(HttpSession session,@RequestParam String phone) {
+		session.setAttribute("phone",phone);
+		System.out.println("phoneeeee = "+phone);
+	}
+	
 	
 	
 	

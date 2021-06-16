@@ -18,13 +18,95 @@
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <style>
+.navbar {
+  z-index: 1;
+}
 
+.navbar {
+  overflow: hidden;
+  background-color: #FFD801;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+
+.navbar #aaa {
+  float:right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.navbar button{
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+.navbar #aa {
+  float:left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
+.navbar #aa:hover {
+  background: #ddd;
+  color: black;
+}
+.Maintable {
+  z-index: 1;
+}
+.Maintable{
+ overflow: hidden;
+  background-color:pink;
+  position: absolute;
+  bottom:0;
+  width: 100%;
+}
+
+ #view{
+   background-color: lightblue;
+   position: fixed; 
+   top: 50px; 
+   margin-left:auto;
+   margin-right: auto;
+   bottom:250px; 
+   overflow: auto; 
+   width: 1360px;
+  
+ }
+ 
+ 
 
 </style>
 
    
 </head>
 <body>
+<%
+String username =(String) session.getAttribute("id");
+if(username == null)
+{
+	response.sendRedirect("login.jsp");
+}
+%>
 
  <div class="navbar">
    <a href="/" id="aa">Home</a>

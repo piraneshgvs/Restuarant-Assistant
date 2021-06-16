@@ -71,6 +71,13 @@
 </style>
 </head>
 <body>
+<%
+String username =(String) session.getAttribute("id");
+if(username == null)
+{
+	response.sendRedirect("login.jsp");
+}
+%>
 
 <div class="navbar">
    <a href="/" id="aa">Home</a>
@@ -81,28 +88,34 @@
   <div class="date">  
   <form action="\adminsummary">  
   <label>Select your From Date:</label>
-  <input type="date" name="date">
+  <input style="font-size:160%;" type="date" name="date">
    <label>Select your To  Date:</label>
-  <input type="date" name="date1">
+  <input style="font-size:160%;"type="date" name="date1">
   <input class="btn btn-success" type="submit">
   </form>
   </div>
    <div class="date1">
-     <label style="color:blue;">FROM:</label>
-     <input style="color:red;"type="date" value="${date}" readonly>
+     <label>FROM:</label>
+     <input style="font-size:160%;color:blue;"type="date" value="${date}" readonly>
      
-     <label  style="color:blue;">TO:</label>
-     <input style="color:red;" type="date" value="${date1}" readonly>
+     <label>TO:</label>
+     <input style="font-size:160%;color:blue;" type="date" value="${date1}" readonly>
+     <div class="value">
+		<c:forEach items="${Total}" var="admin">
+		<label style="color:darkgreen;">Grand Total = </label>
+	    <c:out value="${admin.total}"></c:out>
+		</c:forEach>
      </div>
     
  
-		<table class="table table-hover">
+		<table>
+		 
 	
 			<tr>
 				
-				<td><th>Food Name</th></td>
-				<td><th>Quantity</th></td>
-				<td><th>Amount</th></td>
+				<th>Food Name</th>
+				<th>Quantity</th>
+				<th>Amount</th>
 				
 			</tr>
 		
@@ -110,31 +123,18 @@
 			<c:forEach items="${summary}" var="admin">
 	<tr>
 					
-					<td><th><c:out value="${admin.foodname}"></c:out></th></td>
-					<td><th><c:out value="${admin.quantity}"></c:out></th></td>
-					<td><th><c:out value="${admin.amount}"></c:out></th></td>
+					<td><c:out value="${admin.foodname}"></c:out></td>
+					<td><c:out value="${admin.quantity}"></c:out></td>
+					<td><c:out value="${admin.amount}"></c:out></td>
 				
 	</tr>		
 			</c:forEach>
-			<br>
-			<br>
+			
 			
 		</table >
-		<table class="grand" align="center">
-		   
-			<tr>
-			<td><th>Grand Total</th></td>
-			</tr>
-		<c:forEach items="${Total}" var="admin">
-	<tr>
-					
-					<td><th><c:out value="${admin.total}"></c:out></th></td>
-					
-				
-	</tr>		
-			</c:forEach>
+		
 	
-	</table>
+
 	
 </body>
 </html>

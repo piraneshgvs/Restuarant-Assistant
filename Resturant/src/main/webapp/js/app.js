@@ -1,6 +1,7 @@
 // Create a Recaptcha verifier instance globally
         // Calls submitPhoneNumberAuth() when the captcha is verified
-      
+       
+       
         
            
         window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier(
@@ -17,6 +18,13 @@
         // Takes the value from the 'phoneNumber' input and sends SMS to that phone number
         function submitPhoneNumberAuth() {
         var phoneNumber = document.getElementById("phoneNumber").value;
+        $.ajax({
+              url:"/sessionlock",
+              type:'POST',
+              data:{phone:phoneNumber},
+             });
+              
+              
         localStorage.setItem("phone",phoneNumber);
             var appVerifier = window.recaptchaVerifier;
             firebase.auth().signInWithPhoneNumber(phoneNumber, appVerifier).then((confirmationResult)=>{

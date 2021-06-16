@@ -1,12 +1,45 @@
-
+body{
+	 background-color: lightblue;
+}
 
 .date{
 	padding:100px;
+    text-align:center;
+    color:darkblue;
+	font-size:160%;
 }
 .date1{
-	padding:20px;
+	padding:0px;
+	text-align:center;
+	color:darkblue;
+	font-size:160%;
+}
+.value{
+	
+	
 }
 
-.grand{
-	background-color:aqua;
+table {
+ position: relative;
+    right: -430px;
+  
+}
+td{
+	font-size:20px;
+}
+
+
+table,th, td {
+  text-align: left;
+  padding: 16px;
+  height:35px;
+   border: 2px solid black;
+  border-collapse: collapse;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+tr:nth-child(odd) {
+  background-color: #f2f2f2;
 }

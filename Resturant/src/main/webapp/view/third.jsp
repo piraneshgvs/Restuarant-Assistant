@@ -83,6 +83,13 @@
 </head>
 
 <body>
+    <%
+    String username =(String) session.getAttribute("phone");
+    if(username == null)
+   {
+	response.sendRedirect("/view/index.jsp");
+   }
+  %>
 
    <div class="navbar">
     <a href="/" id="aa">Home</a>

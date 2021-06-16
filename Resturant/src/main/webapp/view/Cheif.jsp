@@ -21,6 +21,13 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
+<%
+String username =(String) session.getAttribute("id");
+if(username == null)
+{
+	response.sendRedirect("login.jsp");
+}
+%>
 <div class="navbar">
    <a href="/">Home</a>
   <a href="./view/login.jsp" id="logout" type="button"  class="btn btn-danger">LOG OUT</a>

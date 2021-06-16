@@ -20,6 +20,8 @@ import com.example.demo.model.StaffRole;
 
 import java.util.*;
 
+import javax.servlet.http.HttpSession;
+
 
 @Controller
 public class AdminController {
@@ -124,8 +126,9 @@ public class AdminController {
 	
 	
 	@RequestMapping(value="/login", method = RequestMethod.POST)
-	public String login(@RequestParam String id, @RequestParam String password,  ModelMap modelMap){
+	public String login(@RequestParam String id, @RequestParam String password,  ModelMap modelMap,HttpSession session){
 		
+		session.setAttribute("id",id);
 		String ans = loginDAO.login(id, password);
 		if(ans.equals("false")) {
 			modelMap.addAttribute("message", "Please check your Phone nuumber and password");

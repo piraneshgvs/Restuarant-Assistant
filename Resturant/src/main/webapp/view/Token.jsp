@@ -17,6 +17,13 @@
    
 </head>
 <body>
+<%
+String username =(String) session.getAttribute("phone");
+if(username == null)
+{
+	response.sendRedirect("index.jsp");
+}
+%>
 <div class="navbar">
   <button type="button" class="btn btn-danger" onclick="logout()">LOG OUT</button>
    <a href="/">Home</a>

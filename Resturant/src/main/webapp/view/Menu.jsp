@@ -94,7 +94,13 @@ margin:0;
 </style>
 </head>
 <body>
-
+   <%
+  String username =(String) session.getAttribute("phone");
+  if(username == null)
+  {
+	response.sendRedirect("index.jsp");
+  }
+  %>
    <div class="navbar">
    <a href="/" id="aa">Home</a>
    <button type="button" class="btn btn-danger" onclick="logout()">LOG OUT</button>
