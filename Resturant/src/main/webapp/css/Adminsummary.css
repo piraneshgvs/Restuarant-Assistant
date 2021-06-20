@@ -1,7 +1,11 @@
 body{
 	 background-color: lightblue;
 }
-
+.error{
+	text-align:center;
+	color:red;
+	font-size:160%;
+}
 .date{
 	padding:100px;
     text-align:center;

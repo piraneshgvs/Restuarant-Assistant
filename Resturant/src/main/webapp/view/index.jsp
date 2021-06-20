@@ -19,6 +19,7 @@
     <title>Document</title>
 </head>
 <body>
+
  <div class="navbar">
    <a href="/">Home</a>
    </div>

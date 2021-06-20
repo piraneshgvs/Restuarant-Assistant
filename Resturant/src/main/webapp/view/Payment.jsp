@@ -39,12 +39,12 @@
   
                  
               <div class="proceed">
-                <button type="button" class="btn btn-success btn-block" onclick="paymentProcess()" style="font-size : 40px;">Tap To Pay</button>
+                <button type="button" class="btn btn-success" onclick="paymentProcess()" style="font-size : 40px;">Tap To Pay</button>
               </div>
            
   
   
-   <input type="text" value="total"/> 
+  
     
  
 

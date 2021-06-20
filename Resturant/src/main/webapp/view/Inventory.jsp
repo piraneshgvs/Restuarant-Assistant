@@ -104,7 +104,7 @@
 String username =(String) session.getAttribute("id");
 if(username == null)
 {
-	response.sendRedirect("login.jsp");
+	response.sendRedirect("/view/login.jsp");
 }
 %>
 

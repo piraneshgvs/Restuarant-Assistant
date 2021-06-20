@@ -46,6 +46,11 @@ table {
 td{
 	font-size:20px;
 }
+.Error{
+	text-align:center;
+	color:darkgreen;
+	font-size:160%;
+}
 
 
 table,th, td {

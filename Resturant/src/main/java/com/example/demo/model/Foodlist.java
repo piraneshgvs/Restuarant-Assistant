@@ -5,7 +5,9 @@ package com.example.demo.model;
 
 
 
+
 import javax.validation.constraints.NotEmpty;
+
 
 import org.springframework.stereotype.Component;
 
@@ -17,12 +19,12 @@ public class Foodlist {
 	private int fQua;
 	private int fTot;
 	@NotEmpty(message = "Table number is required")
-	private int tableno;
+	private String tableno;
 	public Foodlist() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Foodlist(int fid, int fQua, int fTot,int tableno) {
+	public Foodlist(int fid, int fQua, int fTot,String tableno) {
 		super();
 		this.fid = fid;
 		this.fQua = fQua;
@@ -47,10 +49,10 @@ public class Foodlist {
 	public void setfTot(int fTot) {
 		this.fTot = fTot;
 	}
-	public int getTableno() {
+	public String getTableno() {
 		return tableno;
 	}
-	public void setTableno(int tableno) {
+	public void setTableno(String tableno) {
 		this.tableno = tableno;
 	}
 	@Override

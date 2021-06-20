@@ -14,7 +14,7 @@ import com.example.demo.model.OrderDetails;
 import com.example.demo.model.Orders;
 
 @Component
-public class CheifImplDAO implements CheifDAO {
+public class ChefImplDAO implements ChefDAO {
 
 	
 	private List<List<Orders>> flist; 

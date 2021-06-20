@@ -1,13 +1,16 @@
     .proceed {
- 
+  position:relative;
   border: none; /* Remove borders */
   color: white; /* White text */
-  padding: 420px 400px; /* Some padding */
-  
+  padding:0px ;/*; Some padding */
+  bottom:-250px;
+  right:-850px;
 }
 body {
 margin:0;
 overflow:hidden;
+background-image:url("../images/payment.jpg");
+background-size:cover;
 }
 .navbar {
   z-index: 1;

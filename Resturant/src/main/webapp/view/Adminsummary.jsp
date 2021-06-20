@@ -91,8 +91,10 @@ if(username == null)
   <input  type="date" name="date">
    <label>Select your To  Date:</label>
   <input type="date" name="date1">
+  
   <input class="btn btn-success" type="submit">
   </form>
+  
   </div>
    <div class="date1">
      <label>FROM:</label>
@@ -107,7 +109,7 @@ if(username == null)
 	    <c:out value="INR ${admin.total}"></c:out>
 		</c:forEach>
      </div>
-   
+   <div class="error">${msg}</div>
  
 		<table align="center">
 		 

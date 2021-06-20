@@ -1,6 +1,21 @@
-.place{
+.place {
+  z-index: 1;
+}
+.bill{
 	text-align:right;
-	font-Weight:50px;
+	position:relative;
+	right:-600px;
+	font-size:160%;
+}
+.No{
+	font-size:160%;
+}
+.place{
+ overflow: hidden;
+  background-color:pink;
+  position: absolute;
+  bottom:0;
+  width: 100%;
 }
 .heading{
 	padding:50px;
@@ -8,38 +23,20 @@
 	color:green;
 	font-size:25px;
 }
-.table{
-	padding:50px;
-	position:responsive;
-	right:-150px;
-	
-}
-.tech-slideshow {
-  height: 200px;
-  max-width: 1300px;
-  margin: 0 auto;
-  position: relative;
-  overflow: hidden;
-  transform: translate3d(0, 0, 0);
-}
-.tech-slideshow div {
-
-   height: 200px;
-  width: 4526px;
-  background: url(../images/im1.jpg);
-  position: absolute;
-  top: 40;
-  left: 0;
-  height:100%;
-  transform: translate3d(0, 0, 0);
-}
-.tech-slideshow .mover-1 {
-  animation: moveSlideshow 30s linear infinite;
+#view{
+   background-color: lightblue;
+   position: fixed; 
+   top: 80px; 
+   margin-left:auto;
+   margin-right: auto;
+   bottom:140px; 
+   overflow: auto; 
+   width: 1360px;
+  
+ }
+.error{
+	text-align:center;
+	color:red;
+	font-size:160%;
 }
 
-
-@keyframes moveSlideshow {
-  100% { 
-    transform: translateX(-66.6666%);  
-  }
-}

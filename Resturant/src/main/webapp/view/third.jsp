@@ -3,6 +3,7 @@
     <%@page import="com.example.demo.model.Foodlist"%>
 <%@ taglib prefix="sf" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -107,8 +108,10 @@
 </div>
     
 	<sf:form name="form" action="saveOrder" modelAttribute="addfood" method="post">
-	 <div class="table">
+	 <div id="view">
+	 <div class="error">${message}</div>	
 	<table class="table table-condensed">
+	
 		<tr>
 			
 			
@@ -137,31 +140,36 @@
 			
 			</tr>
 		</c:forEach>
-		<tr>
-		<td class="btn btn-warning">Table Number</td>
+		
+	</table>
+	</div>
+	<div class="place">
+	<table>
+	<tr class="No">
+		<th>Table Number = </th>
 		<td><sf:input path="tableno" list="table" /> <datalist id="table" name="tablenumber">
                  <option value="1">1</option>
                  <option value="2">2</option>
                  <option value="3">3</option>
                  <option value="4">4</option>
                 </datalist></td>
-                <td>${tabmessage}</td>
-         </tr>
-         <tr>
-			<td colspan="6" align="right">Sum</td>
-			<td><sf:input id="total" path="fTot" value="${total}"/></td>
+                 <td><sf:errors path="tableno" cssStyle="color:red;"></sf:errors>
+           </tr>
+          
+         <tr class="bill"> 
+			<th>Total Bill = </th>
+			<td><input id="total" path="fTot" value="${total}" readonly/></td>
 			
 			
 		</tr>
+	
 	</table>
-	</div>
-	<div class="place">
 	<input type="submit" class="btn btn-primary btn-lg btn-block" name="place" value="Place Order"/> 
 	
 	</div> 
 	</sf:form>
 			
-	<div>${message}</div>	
+	
 
 	   <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>

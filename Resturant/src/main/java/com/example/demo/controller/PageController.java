@@ -1,10 +1,11 @@
 package com.example.demo.controller;
 
-import java.util.HashMap;
+
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -14,13 +15,13 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.ModelAndView;
+
 
 
 import com.example.demo.dao.OrderDAO;
 import com.example.demo.dao.PhoneDAO;
 import com.example.demo.dao.RestuarantDAO;
-import com.example.demo.dao.RestuarantImplDAO;
+
 import com.example.demo.entities.Item;
 import com.example.demo.model.Foodlist;
 import com.example.demo.model.Foods;
@@ -28,6 +29,7 @@ import com.example.demo.model.Phone;
 
 
 @Controller
+
 public class PageController {
 
 	
@@ -90,8 +92,8 @@ public class PageController {
      
 	@RequestMapping(value="/saveOrder", params="place", method=RequestMethod.POST)
 	public String saveTrainee(@Valid @ModelAttribute("addfood") Foodlist foodlist,BindingResult result, HttpSession session,@RequestParam(required=false,name="tableno" ) String tableno,ModelMap map) {
-		System.out.println("Errrrors + = "+result);
-		if (result.hasErrors()) {
+		
+		if (result.hasErrors()) { 
 			return "third";
 		}
 		List<Item> cart = (List<Item>) session.getAttribute("cart");

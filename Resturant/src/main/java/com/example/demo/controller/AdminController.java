@@ -114,10 +114,19 @@ public class AdminController {
 	
 	@RequestMapping("/adminsummary")
 	public String Ordersummary(ModelMap modelMap,@RequestParam(required=false,name="date") String date,@RequestParam(required=false,name="date1") String date1) {
-        modelMap.addAttribute("date",date);
+		
+		modelMap.addAttribute("date",date);
         modelMap.addAttribute("date1",date1);
-		modelMap.addAttribute("summary", inventaroyDAO.getOrdersummary(date,date1));
+        List<Ordersummary> data = inventaroyDAO.getOrdersummary(date,date1);
+        boolean out=data.isEmpty();
+        if(out==true)
+        {
+        	modelMap.addAttribute("msg","Datas Not Available Please Select Valid Dates");
+        }
+        else {
+        modelMap.addAttribute("summary", inventaroyDAO.getOrdersummary(date,date1));
 		modelMap.addAttribute("Total", inventaroyDAO.getGrandtotal(date,date1));
+        }
 	
 	return "Adminsummary";	
 	}

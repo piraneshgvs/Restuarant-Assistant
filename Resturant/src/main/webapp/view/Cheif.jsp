@@ -35,7 +35,7 @@ if(username == null)
    </div>
 
 
-
+       <div class="Error">${msg}</div>
 
 	   <c:forEach items="${details }" var="detail" varStatus="loopCount">
 			
