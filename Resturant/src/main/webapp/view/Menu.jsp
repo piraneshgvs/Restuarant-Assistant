@@ -147,6 +147,7 @@ margin:0;
 			<tr>
 				
 				<td><th>Food Name</th></td>
+				<td><th>Images</th></td>
 				<td><th>Price</th></td>
 				<td><th>Click Add to Cart</th></td>
 			</tr>
@@ -156,6 +157,7 @@ margin:0;
 	<tr>
 					
 					<td><th><c:out value="${food.fName}"></c:out></th></td>
+					<td><th><img width=200 height=150 src="data:image/jpg;base64,${food.image}" /></</th></td>
 					<td><th><c:out value="${food.fPrice}"></c:out></th></td>
 					<td><th><a href="${pageContext.request.contextPath }/cart/buy/${food.fid}"><button type="button" class="btn btn-info">Add To Cart</button></a></th></td>
 	</tr>		

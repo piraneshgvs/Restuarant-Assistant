@@ -118,13 +118,15 @@ if(username == null)
     <tr><td><th>Add the Food Item</th></td></tr>
     <tr>
     <td><th>Enter the Food Name</th></td>
+    <td><th>Choose Food Image</th></td>
     <td><th>Enter the Food Price</th></td>
     </tr>
     	<tr>
 
-		<form:form action="/addfood">
+		<form:form action="/addfood" enctype="multipart/form-data">
 		        
 				<td><th><input id="foodname" name="foodname"></th></td>
+				<td><th><input type="file" id="images" name="images"></th></td>
 				<td><th><input id="foodprice" name="foodprice"></th></td>
 				<td><th><input type="submit" class="btn btn-success" value="ADD FOOD"></th></td>
 		</form:form>

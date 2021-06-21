@@ -31,8 +31,8 @@
    margin-right: auto;
    bottom:140px; 
    overflow: auto; 
-   width: 1360px;
-  
+   width:100%;
+   padding-left:20px;
  }
 .error{
 	text-align:center;

@@ -58,9 +58,10 @@ public class RestuarantImplDAO implements RestuarantDAO {
 			String b = (String) foodRow.get("food_name");
 			int c = Integer.parseInt(String.valueOf(foodRow.get("price")));
 			String d = (String) foodRow.get("available");
+			byte[] e= (byte[]) foodRow.get("images");
 			
 			
-			fList.add(new Foods(a,b,c,d));
+			fList.add(new Foods(a,b,c,d,e));
 		}
 	
 		return fList;
@@ -78,7 +79,12 @@ public class RestuarantImplDAO implements RestuarantDAO {
 			String b = (String) foodRow.get("food_name");
 			int c = Integer.parseInt(String.valueOf(foodRow.get("price")));
 			String d = (String) foodRow.get("available");
-			fList1.add(new Foods(a,b,c,d));
+            byte[] e= (byte[]) foodRow.get("images");
+			
+			
+			fList1.add(new Foods(a,b,c,d,e));
+
+			
 		}
 	
 		return fList1;

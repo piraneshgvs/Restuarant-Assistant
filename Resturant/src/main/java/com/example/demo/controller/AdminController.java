@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.example.demo.dao.InventaroyDAO;
@@ -18,6 +19,7 @@ import com.example.demo.model.Foods;
 import com.example.demo.model.Ordersummary;
 import com.example.demo.model.StaffRole;
 
+import java.io.IOException;
 import java.util.*;
 
 import javax.servlet.http.HttpSession;
@@ -55,8 +57,9 @@ public class AdminController {
     } 
 	
 	@RequestMapping(value="/addfood", method = RequestMethod.POST)
-	public String saveFooditem(@RequestParam String foodname, @RequestParam int foodprice) {
-		int result = inventaroyDAO.insertFooditem(foodname, foodprice);
+	public String saveFooditem(@RequestParam String foodname, @RequestParam int foodprice,@RequestParam("images") MultipartFile file) throws IOException {
+	
+		int result = inventaroyDAO.insertFooditem(foodname,foodprice,file.getBytes());
 		return "redirect:/inventoryform";
 	}
 	

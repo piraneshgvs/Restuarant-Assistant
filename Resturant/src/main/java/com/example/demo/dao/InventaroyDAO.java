@@ -14,7 +14,7 @@ import com.example.demo.model.Ordersummary;
 public interface InventaroyDAO {
 	
 
-	public int insertFooditem(String foodname, int foodprice);
+	public int insertFooditem(String foodname, int foodprice,byte[] images);
 	public int deleteFooditem(int foods);
 	public List<String> editFooditem(int id);
 	public List<Ordersummary> getOrdersummary(String date,String date1);

@@ -26,11 +26,11 @@ public class InventaroyImplDAO implements InventaroyDAO{
 		
 
 	@Override
-	public int insertFooditem(String foodname, int foodprice) {
-		String query = "insert into food(food_name,price) values(?,?)";
+	public int insertFooditem(String foodname, int foodprice,byte[] images) {
+		String query = "insert into food(food_name,price,images) values(?,?,?)";
 		
 
-		int out = jdbcTemplate.update(query,foodname, foodprice);
+		int out = jdbcTemplate.update(query,foodname, foodprice,images);
 
 		return out;
 	}
