@@ -6,8 +6,9 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
-import com.example.demo.entities.*;
+import com.example.demo.model.Item;
 import com.example.demo.model.Foodlist;
+import com.example.demo.model.Item;
 import com.example.demo.model.Phone;
 
 @Component
@@ -39,11 +40,5 @@ public class OrderImplDAO implements OrderDAO{
 
 	}
 
-	@Override
-	public void insertFeedback(String feedback) {
-		
-		String query = "update user set feedback= ? where user_id= ? ;";
-		String userid = Phone.getUserid();
-	    jdbcTemplate.update(query,feedback,userid);
-	}
+	
 }

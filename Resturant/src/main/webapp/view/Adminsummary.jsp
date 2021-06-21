@@ -14,7 +14,7 @@
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
  <link rel="stylesheet" href="../css/Adminsummary.css">   
-<title>Insert title here</title>
+<title>Summary Page</title>
 <style>
 .navbar {
   z-index: 1;

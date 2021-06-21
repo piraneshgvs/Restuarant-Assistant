@@ -21,10 +21,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.example.demo.dao.OrderDAO;
 import com.example.demo.dao.PhoneDAO;
 import com.example.demo.dao.RestuarantDAO;
-
-import com.example.demo.entities.Item;
 import com.example.demo.model.Foodlist;
 import com.example.demo.model.Foods;
+import com.example.demo.model.Item;
 import com.example.demo.model.Phone;
 
 
@@ -61,7 +60,7 @@ public class PageController {
 	@RequestMapping("/")
 	public String homepage() {
 		
-		return "Jungle Restuarant";
+		return "Jungle Restaurant";
 	}
 	
 	
@@ -124,16 +123,4 @@ public class PageController {
 		System.out.println("phoneeeee = "+phone);
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-
 }

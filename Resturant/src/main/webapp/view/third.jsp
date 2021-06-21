@@ -134,7 +134,7 @@
 				<td>${item.product.fPrice }</td>
 				<td><input type="submit" value="-" onclick="form.action='/cart/alter-minus/${item.product.fid }';"><sf:input path="fQua" value="${item.quantity }" /><input type="submit" value="+" onclick="form.action='/cart/alter-plus/${item.product.fid }';"></td>
 				<td>${item.quantity * item.product.fPrice }</td>
-				<td align="center"><a  class="btn btn-danger"
+				<td><a  class="btn btn-danger"
 					href="cart/remove/${item.product.fid }"
 					onclick="return confirm('Are you sure?')">Remove</a></td>
 			

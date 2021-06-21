@@ -1,6 +1,4 @@
-package com.example.demo.entities;
-import com.example.demo.model.Foods;
-
+package com.example.demo.model;
 
 public class Item {
 

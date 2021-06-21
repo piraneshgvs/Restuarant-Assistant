@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jungle Restuarant</title>
+    <title>Jungle Restaurant</title>
 
     <!-- aos css cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
 
     <!-- custom css file link  -->
-    <link rel="stylesheet" href="../css/Jungle Restuarant.css">
+    <link rel="stylesheet" href="../css/Jungle Restaurant.css">
 
 </head>
 <body>
@@ -52,7 +52,7 @@
 <section class="home" id="home">
 
     <div class="content" data-aos="fade-right">
-        <h3>Welcome To Jungle Restuarant!!!!</h3>
+        <h3>Welcome To Jungle Restaurant!!!!</h3>
         <p>We belive good food offer great smile</p>
         <a href="./view/index.jsp"><button class="btn">get started</button></a>
     </div>
@@ -207,19 +207,13 @@
 
         <div class="box">
             <h3>contact info</h3>
-            <p> <i class="fas fa-map-marker-alt"></i> mumbai, indai 400104 </p>
-            <p> <i class="fas fa-envelope"></i> example@gmail.com </p>
-            <p> <i class="fas fa-phone"></i> +123-456-7890 </p>
-            <p> <i class="fas fa-phone"></i> +111-222-333 </p>
+            <p> <i class="fas fa-map-marker-alt"></i> Munnar,Kerala</p>
+            <p> <i class="fas fa-envelope"></i> junglerestaurant@gmail.com </p>
+            <p> <i class="fas fa-phone"></i> +919750808384 </p>
+            <p> <i class="fas fa-phone"></i> +919778899221 </p>
         </div>
 
-        <div class="box">
-            <h3>branch location</h3>
-            <a href="#">india</a>
-            <a href="#">USA</a>
-            <a href="#">france</a>
-            <a href="#">russia</a>
-        </div>
+        
 
         <div class="box">
             <h3>quick links </h3>
@@ -266,7 +260,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 <!-- custom js file link  -->
-<script src="../js/Jungle Restuarant.js"></script>
+<script src="../js/Jungle Restaurant.js"></script>
 
 <!-- initializing aos  -->
 

@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.example.demo.entities.Item;
 import com.example.demo.model.Foods;
+import com.example.demo.model.Item;
 import com.example.demo.dao.RestuarantImplDAO;
 
 @Controller

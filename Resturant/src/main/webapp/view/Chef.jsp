@@ -11,7 +11,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Order Details Page</title>
-<link rel="stylesheet" href="../css/Cheif.css">
+<link rel="stylesheet" href="../css/Chef.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
 <!-- jQuery library -->
@@ -67,13 +67,13 @@ if(username == null)
 					</c:if>
 		
 			</c:forEach>
-			<td><a href="/cheif/finish/${fn:substring(string,22,65) }"><button class="btn btn-success">Completed</button></a></td>
+			<td><a href="/chef/finish/${fn:substring(string,22,65) }"><button class="btn btn-success">Completed</button></a></td>
 			          </tr>
 	</c:forEach>
 
 	</table>
 
-<!-- <script type="text/javascript" src="../js/Cheif.js"></script> -->
+
 
 
 

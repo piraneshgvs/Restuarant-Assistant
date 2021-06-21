@@ -17,8 +17,8 @@ import org.springframework.web.servlet.ModelAndView;
 import com.example.demo.dao.ChefDAO;
 import com.example.demo.dao.LoginDAO;
 import com.example.demo.dao.RestuarantImplDAO;
-import com.example.demo.entities.Item;
 import com.example.demo.model.CutomerId;
+import com.example.demo.model.Item;
 import com.example.demo.model.Orders;
 
 @Controller

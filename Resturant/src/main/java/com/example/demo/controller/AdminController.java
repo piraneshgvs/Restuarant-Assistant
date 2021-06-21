@@ -152,7 +152,7 @@ public class AdminController {
               }
               else {
             	  modelMap.addAttribute("name", staffRole.getName());
-            	  return "redirect:/cheif";
+            	  return "redirect:/chef";
               }
 		}
 		
@@ -161,9 +161,5 @@ public class AdminController {
 
 		
 	}
-	@RequestMapping("/addstaff")
-	public String addstaff(@RequestParam(required=false,name="name") String name, @RequestParam(required=false,name="phone") String phone, @RequestParam(required=false,name="password") String password, @RequestParam(required=false,name="staff_role") String staff_role) {
-		int result = loginDAO.insertNewstaff(name,phone, password, staff_role);
-		return "Addstaff";
-	}
+	
 }
