@@ -2,19 +2,20 @@
     pageEncoding="ISO-8859-1"%>
     <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
- <link rel="stylesheet" href="../css/Token.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/Token.css">
+  <title>Verify</title>
 
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-   
 </head>
 <body>
 <%
@@ -24,12 +25,13 @@ if(username == null)
 	response.sendRedirect("index.jsp");
 }
 %>
-<div class="navbar">
+<div class="navbar" role="navigation">
   <button type="button" class="btn btn-danger" onclick="logout()">LOG OUT</button>
-   <a href="/">Home</a>
-   </div>
-  <div class="heading"><h1>Welcome To Jungle Restaurant</h1></div>
-<div class="verify">
+  <a href="/">Home</a>
+</div>
+
+<div class="heading">Welcome To Jungle Restaurant</div>
+<div class="container justify-content-center align-middle" id="verify">
 
 <form action="/phonenumber" method="post">
 <input type="text" id="phone" name="phone" readonly><br><br>

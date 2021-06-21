@@ -102,7 +102,7 @@
             <i class="fas fa-star"></i>
         </div>
         <div class="price">Rs.150.00</div>
-        <a href="../view/index.jsp"><button class="btn">add to cart</button></a>
+        
     </div>
 
     <div class="box" data-aos="fade-left">
@@ -116,7 +116,7 @@
           
         </div>
         <div class="price">Rs.120.00</div>
-        <a href="../view/index.jsp"><button class="btn">add to cart</button></a>
+      
     </div>
 
     <div class="box" data-aos="fade-right">
@@ -130,7 +130,7 @@
             <i class="fas fa-star"></i>
         </div>
         <div class="price">Rs.250.00</div>
-        <a href="../view/index.jsp"><button class="btn">add to cart</button></a>
+       
     </div>
 
     <div class="box" data-aos="fade-left">
@@ -144,7 +144,7 @@
             <i class="fas fa-star"></i>
         </div>
         <div class="price">Rs.50.00</div>
-        <a href="../view/index.jsp"><button class="btn">add to cart</button></a>
+        
     </div>
 
 </div>

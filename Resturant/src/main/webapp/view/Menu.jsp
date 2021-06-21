@@ -12,7 +12,7 @@
  <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restuarant</title>
+    <title>Restaurant</title>
      <link rel="stylesheet" href="../css/Menu.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
@@ -141,10 +141,10 @@ margin:0;
       
     </div>
   </div>
-
+  <br>
   <table class="table table-hover">
 	
-			<tr>
+			<tr class="head">
 				
 				<td><th>Food Name</th></td>
 				<td><th>Images</th></td>
@@ -154,7 +154,7 @@ margin:0;
 		
 			
 			<c:forEach items="${products}" var="food">
-	<tr>
+	<tr class="food">
 					
 					<td><th><c:out value="${food.fName}"></c:out></th></td>
 					<td><th><img width=200 height=150 src="data:image/jpg;base64,${food.image}" /></</th></td>

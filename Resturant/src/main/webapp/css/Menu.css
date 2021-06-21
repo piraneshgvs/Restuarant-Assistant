@@ -2,6 +2,16 @@
   height: 300px;
   
 }
+.head{
+	background-color:#c0c0c0;
+	font-size:120%;
+}
+.food{
+	
+	font-size:160%;
+	text-align:center;
+}
+
 
 .item img {
     position: absolute;
